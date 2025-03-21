@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-navbar: #f6f7f2;
+    --light-green: #f6f6f1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    overflow: auto;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Gentium Plus", serif;
+}
+
+p {
+    /*font-size: clamp(0.8rem, 1vw, 1.1rem);*/
+}
