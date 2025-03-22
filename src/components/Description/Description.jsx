@@ -11,10 +11,10 @@ const Description = () => {
     return (
         <div
             ref={ref}
-            className="bg-[url(/women.png)] bg-no-repeat py-10 h-fit md:h-screen bg-center md:bg-left bg-contain flex items-center justify-center md:justify-end p-5 md:pt-0 md:pr-20"
+            className="bg-[url(/women.png)] bg-no-repeat bg-contain py-10 h-fit md:h-screen bg-center md:bg-left flex items-center justify-center md:justify-end p-5 overflow-hidden"
         >
             <motion.p
-                className="text-lg w-full md:w-1/2 text-center md:text-right md:leading-10"
+                className="text-lg md:pr-10 w-full md:w-1/2 text-center md:text-right md:leading-10"
                 initial={{x: 100, opacity: 0}}
                 animate={{
                     x: inView ? 0 : 100, // Animate when the component is in view

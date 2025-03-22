@@ -24,8 +24,7 @@ const Diseases = () => {
                 </motion.h2>
                 <div className='flex flex-wrap justify-center'>
                     <motion.div
-                        className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                        variants={fadeInScale}
+                        className="max-w-sm bg-white border border-gray-200 rounded-lg shadow"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{once: false}}
