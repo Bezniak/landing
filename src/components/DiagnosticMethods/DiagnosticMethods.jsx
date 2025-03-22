@@ -1,85 +1,67 @@
 import React from 'react';
-import {Accordion} from 'flowbite-react';
+
+const diagnosticMethods = [
+    {
+        title: "УЗИ (ультразвуковое исследование)",
+        description: [
+            "Рекомендуется женщинам до 40 лет ежегодно и при наличии любых тревожных симптомов.",
+            "Позволяет оценить состояние тканей, обнаружить кисты, фиброаденомы и другие образования."
+        ]
+    },
+    {
+        title: "Маммография",
+        description: [
+            "\"Золотой стандарт\" для женщин старше 40–45 лет.",
+            "Проводится обычно 1 раз в год или 1 раз в 2 года (зависит от рекомендаций врача и индивидуальных факторов риска).",
+            "Может обнаружить микрокальцинаты и небольшие опухоли, невидимые на УЗИ."
+        ]
+    },
+    {
+        title: "МРТ (магнитно-резонансная томография)",
+        description: [
+            "Используется при высоком риске развития рака (например, при наследственной предрасположенности) или для уточнения диагноза, если результаты УЗИ и маммографии противоречивы."
+        ]
+    },
+    {
+        title: "Пункция или биопсия",
+        description: [
+            "Выполняется при обнаружении подозрительных образований для точного определения их природы (доброкачественная или злокачественная)."
+        ]
+    },
+    {
+        title: "Цитологическое и гистологическое исследование",
+        description: [
+            "Исследование клеток и тканей, полученных при пункции/биопсии, под микроскопом."
+        ]
+    }
+];
 
 const DiagnosticMethods = () => {
     return (
-        <div className="mx-auto p-5 py-10 overflow-x-hidden">
-            <h1 className="text-4xl text-center mb-8">Методы диагностики заболеваний груди</h1>
-
-            <Accordion flush>
-                <Accordion.Panel>
-                    <Accordion.Title>
-                        <span className="text-lg font-semibold text-green-800">УЗИ (ультразвуковое исследование)</span>
-                    </Accordion.Title>
-                    <Accordion.Content>
-                        <ul className="list-disc pl-5">
-                            <li>Рекомендуется женщинам до 40 лет ежегодно и при наличии любых тревожных симптомов.</li>
-                            <li>Позволяет оценить состояние тканей, обнаружить кисты, фиброаденомы и другие
-                                образования.
-                            </li>
-                        </ul>
-                    </Accordion.Content>
-                </Accordion.Panel>
-
-                <Accordion.Panel>
-                    <Accordion.Title>
-                        <span className="text-lg font-semibold text-green-800">Маммография</span>
-                    </Accordion.Title>
-                    <Accordion.Content>
-                        <ul className="list-disc pl-5">
-                            <li>«Золотой стандарт» для женщин старше 40–45 лет.</li>
-                            <li>Проводится обычно 1 раз в год или 1 раз в 2 года (зависит от рекомендаций врача и
-                                индивидуальных факторов риска).
-                            </li>
-                            <li>Может обнаружить микрокальцинаты и небольшие опухоли, невидимые на УЗИ.</li>
-                        </ul>
-                    </Accordion.Content>
-                </Accordion.Panel>
-
-                <Accordion.Panel>
-                    <Accordion.Title>
-                        <span
-                            className="text-lg font-semibold text-green-800">МРТ (магнитно-резонансная томография)</span>
-                    </Accordion.Title>
-                    <Accordion.Content>
-                        <ul className="list-disc pl-5">
-                            <li>Используется при высоком риске развития рака (например, при наследственной
-                                предрасположенности) или для уточнения диагноза, если результаты УЗИ и маммографии
-                                противоречивы.
-                            </li>
-                        </ul>
-                    </Accordion.Content>
-                </Accordion.Panel>
-
-                <Accordion.Panel>
-                    <Accordion.Title>
-                        <span className="text-lg font-semibold text-green-800">Пункция или биопсия</span>
-                    </Accordion.Title>
-                    <Accordion.Content>
-                        <ul className="list-disc pl-5">
-                            <li>Выполняется при обнаружении подозрительных образований для точного определения их
-                                природы (доброкачественная или злокачественная).
-                            </li>
-                        </ul>
-                    </Accordion.Content>
-                </Accordion.Panel>
-
-                <Accordion.Panel>
-                    <Accordion.Title>
-                        <span className="text-lg font-semibold text-green-800">Цитологическое и гистологическое исследование</span>
-                    </Accordion.Title>
-                    <Accordion.Content>
-                        <ul className="list-disc pl-5">
-                            <li>Исследование клеток и тканей, полученных при пункции/биопсии, под микроскопом.</li>
-                        </ul>
-                    </Accordion.Content>
-                </Accordion.Panel>
-            </Accordion>
-
-            <p className="mt-6 text-sm text-gray-500">
-                Важный момент: выбор метода диагностики всегда остаётся за врачом, исходя из возраста пациентки, её
-                индивидуальной истории и предположительного диагноза.
-            </p>
+        <div className="container mx-auto p-4 py-20">
+            <h2 className="text-4xl mb-5 text-center mb-10">Методы диагностики заболеваний груди</h2>
+            <div className="border border-gray-200 rounded-lg overflow-hidden">
+                {diagnosticMethods.map((method, index) => (
+                    <div key={index} className="border-b last:border-b-0">
+                        <button
+                            className="w-full text-left p-4 font-medium text-gray-700 bg-green-50 hover:bg-green-100 focus:outline-none transition cursor-pointer"
+                            onClick={() => {
+                                document.getElementById(`content-${index}`).classList.toggle('hidden');
+                            }}
+                        >
+                            {method.title}
+                        </button>
+                        <div id={`content-${index}`} className="hidden p-4 bg-white">
+                            {method.description.map((text, idx) => (
+                                <p key={idx} className="text-gray-600 mb-2">{text}</p>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <p className="mt-4 text-sm text-gray-500">
+                <span className='text-red-500 font-semibold'>Важно: </span>
+                выбор метода диагностики остаётся за врачом, исходя из возраста пациентки, её индивидуальной истории и предположительного диагноза.</p>
         </div>
     );
 };

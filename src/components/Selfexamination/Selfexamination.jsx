@@ -6,7 +6,6 @@ import {IoBodySharp} from 'react-icons/io5';
 import {motion} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
 import {TiTick} from "react-icons/ti";
-import {FaExclamation} from "react-icons/fa";
 
 const StepCard = ({Icon, title, steps}) => {
     const {ref, inView} = useInView({
