@@ -21,7 +21,7 @@ const StepCard = ({Icon, title, steps}) => {
             transition={{duration: 1}}
             className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
         >
-            <Icon className="size-19 fill-green-200 mb-5"/>
+            <Icon className="size-19 fill-pink-200 mb-5"/>
             <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
                 {title}
             </h5>
@@ -91,24 +91,24 @@ const Selfexamination = () => {
                 </h2>
                 <ul className='mt-10 text-justify md:text-left'>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
+                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
                         Обнаружение любых уплотнений или узелков, особенно если они не исчезают в течение нескольких
                         недель.
                     </li>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
+                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
                         Постоянная боль или дискомфорт, не связанные с менструальным циклом.
                     </li>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
+                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
                         Изменения кожи (покраснение, шелушение, втягивание) или формы соска.
                     </li>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
+                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
                         Любые выделения из сосков (особенно кровянистые).
                     </li>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
+                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
                         Возникновение резкой асимметрии или изменения формы груди.
                     </li>
                 </ul>

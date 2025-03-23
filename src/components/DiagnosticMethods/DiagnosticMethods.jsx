@@ -40,11 +40,11 @@ const DiagnosticMethods = () => {
     return (
         <div className="container mx-auto p-4 py-10 md:py-20">
             <h2 className="text-4xl text-center mb-10">Методы диагностики заболеваний груди</h2>
-            <div className="border border-gray-200 rounded-lg overflow-hidden">
+            <div className="overflow-hidden">
                 {diagnosticMethods.map((method, index) => (
-                    <div key={index} className="border-b last:border-b-0">
+                    <div key={index} className="mb-3">
                         <button
-                            className="w-full text-left p-4 font-medium text-gray-700 bg-green-50 hover:bg-green-100 focus:outline-none transition cursor-pointer"
+                            className="w-full rounded-lg text-left p-4 font-medium text-gray-700 bg-pink-100 hover:bg-pink-200 focus:outline-none transition cursor-pointer"
                             onClick={() => {
                                 document.getElementById(`content-${index}`).classList.toggle('hidden');
                             }}

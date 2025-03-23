@@ -32,16 +32,16 @@ const Structure = () => {
                         Молочная железа состоит из нескольких типов тканей:
                     </motion.span>
                     <motion.li className="flex gap-4 items-center mb-5 mt-8" variants={listItemVariants}>
-                        <TiTickOutline className="size-8 fill-green-900 flex-shrink-0"/>
+                        <TiTickOutline className="size-8 fill-pink-200 flex-shrink-0"/>
                         Железистая ткань отвечает за производство грудного молока и состоит из долек (альвеол) и
                         протоков, по которым молоко транспортируется к соскам.
                     </motion.li>
                     <motion.li className="flex gap-4 items-center mb-5" variants={listItemVariants}>
-                        <TiTickOutline className="size-8 fill-green-900 flex-shrink-0"/>
+                        <TiTickOutline className="size-8 fill-pink-200 flex-shrink-0"/>
                         Жировая ткань окружает железистую, придавая груди форму и объем.
                     </motion.li>
                     <motion.li className="flex gap-4 items-center mb-5" variants={listItemVariants}>
-                        <TiTickOutline className="size-8 fill-green-900 flex-shrink-0"/>
+                        <TiTickOutline className="size-8 fill-pink-200 flex-shrink-0"/>
                         Соединительная ткань обеспечивает поддержку и структурную целостность железы.
                     </motion.li>
                 </ul>
