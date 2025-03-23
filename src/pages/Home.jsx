@@ -6,6 +6,7 @@ import Diseases from "../components/Diseases/Diseases.jsx";
 import Selfexamination from "../components/Selfexamination/Selfexamination.jsx";
 import RiskFactors from "../components/RiskFactors/RiskFactors.jsx";
 import DiagnosticMethods from "../components/DiagnosticMethods/DiagnosticMethods.jsx";
+import BreastHealthTips from "../components/BreastHealthTips/BreastHealthTips.jsx";
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Selfexamination/>
             <RiskFactors/>
             <DiagnosticMethods/>
+            <BreastHealthTips/>
         </div>
     );
 };
