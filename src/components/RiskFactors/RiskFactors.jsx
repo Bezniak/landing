@@ -1,9 +1,13 @@
 import React from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 const RiskFactors = () => {
     return (
-        <div className="h-screen flex items-center justify-center p-5 bg-no-repeat bg-center bg-cover" style={{ backgroundImage: "url('/bg.jpg')" }}>
-            <div className="w-full flex flex-col justify-center items-center mx-auto p-6">
+        <div className="relative h-screen flex items-center justify-center p-5 overflow-hidden">
+            <Parallax speed={-20} className="absolute inset-0 w-full h-full">
+                <img src="/bg.jpg" alt="Background" className="w-full h-full object-cover" />
+            </Parallax>
+            <div className="relative z-10 w-full flex flex-col justify-center items-center mx-auto p-6 shadow-lg">
                 <h2 className="text-4xl mb-4 text-center">
                     Факторы риска заболеваний молочных желез
                 </h2>
