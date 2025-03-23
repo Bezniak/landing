@@ -1,15 +1,10 @@
 import React from 'react';
-import {Parallax} from 'react-parallax';
 
 const RiskFactors = () => {
     return (
-        <Parallax
-            bgImage='/bg.jpg'
-            strength={300}
-            className="h-screen flex items-center justify-center p-5 bg-no-repeat bg-center bg-cover"
-        >
+        <div className="h-screen flex items-center justify-center p-5 bg-no-repeat bg-center bg-cover" style={{ backgroundImage: "url('/bg.jpg')" }}>
             <div className="w-full flex flex-col justify-center items-center mx-auto p-6">
-                <h2 className="text-4xl mb- text-center">
+                <h2 className="text-4xl mb-4 text-center">
                     Факторы риска заболеваний молочных желез
                 </h2>
                 <ol className="list-decimal pl-6 space-y-4 text-lg text-gray-800">
@@ -47,7 +42,7 @@ const RiskFactors = () => {
                     снижающих вероятность развития некоторых заболеваний молочных желез.
                 </p>
             </div>
-        </Parallax>
+        </div>
     );
 };
 
