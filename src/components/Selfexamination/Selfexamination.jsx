@@ -72,7 +72,7 @@ const Selfexamination = () => {
     ];
 
     return (
-        <div className="container mx-auto py-10 md:py-20 p-10">
+        <div className="container mx-auto py-10 md:py-20 p-4">
             <h2 className="text-4xl mb-5 text-center">Самообследование молочных желез</h2>
             <p className="text-center leading-10 mx-auto">
                 Регулярное самообследование – простая, но важная практика, позволяющая вовремя заметить возможные
@@ -89,30 +89,30 @@ const Selfexamination = () => {
                 <h2 className="text-4xl mt-20  text-center">
                     Когда нужно обращаться к маммологу или гинекологу:
                 </h2>
-                <ul className='mt-10'>
+                <ul className='mt-10 text-justify md:text-left'>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='size-8 fill-green-200'/>
+                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
                         Обнаружение любых уплотнений или узелков, особенно если они не исчезают в течение нескольких
                         недель.
                     </li>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='size-8 fill-green-200'/>
+                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
                         Постоянная боль или дискомфорт, не связанные с менструальным циклом.
                     </li>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='size-8 fill-green-200'/>
+                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
                         Изменения кожи (покраснение, шелушение, втягивание) или формы соска.
                     </li>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='size-8 fill-green-200'/>
+                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
                         Любые выделения из сосков (особенно кровянистые).
                     </li>
                     <li className='flex items-center gap-5'>
-                        <TiTick className='size-8 fill-green-200'/>
+                        <TiTick className='w-8 h-8 fill-green-200 shrink-0'/>
                         Возникновение резкой асимметрии или изменения формы груди.
                     </li>
                 </ul>
-                <p className='mt-10'>
+                <p className='mt-10 text-justify'>
                     <span className='text-red-500 font-semibold'>Важно:</span> Самообследование не заменяет регулярные
                     осмотры у специалиста и инструментальные методы диагностики, но может помочь вовремя заметить
                     настораживающие симптомы.

@@ -38,8 +38,8 @@ const diagnosticMethods = [
 
 const DiagnosticMethods = () => {
     return (
-        <div className="container mx-auto p-4 py-20">
-            <h2 className="text-4xl mb-5 text-center mb-10">Методы диагностики заболеваний груди</h2>
+        <div className="container mx-auto p-4 py-10 md:py-20">
+            <h2 className="text-4xl text-center mb-10">Методы диагностики заболеваний груди</h2>
             <div className="border border-gray-200 rounded-lg overflow-hidden">
                 {diagnosticMethods.map((method, index) => (
                     <div key={index} className="border-b last:border-b-0">
@@ -61,7 +61,8 @@ const DiagnosticMethods = () => {
             </div>
             <p className="mt-4 text-sm text-gray-500">
                 <span className='text-red-500 font-semibold'>Важно: </span>
-                выбор метода диагностики остаётся за врачом, исходя из возраста пациентки, её индивидуальной истории и предположительного диагноза.</p>
+                выбор метода диагностики остаётся за врачом, исходя из возраста пациентки, её индивидуальной истории и
+                предположительного диагноза.</p>
         </div>
     );
 };

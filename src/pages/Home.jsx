@@ -10,7 +10,7 @@ import DiagnosticMethods from "../components/DiagnosticMethods/DiagnosticMethods
 const Home = () => {
     return (
         <div>
-            <Slider />
+            <Slider/>
             <Description/>
             <Structure/>
             <Diseases/>
