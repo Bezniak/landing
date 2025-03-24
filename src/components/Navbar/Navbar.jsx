@@ -65,7 +65,7 @@ const Navbar = () => {
     return (
         <>
             <nav
-                className="absolute z-50 top-0 left-1/2 transform -translate-x-1/2 bg-[var(--bg-navbar)] border-gray-200 w-full">
+                className="absolute z-50 top-0 left-1/2 transform -translate-x-1/2 bg-transparent border-gray-200 w-full">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <div className='flex gap-6'>
                         <button
@@ -84,13 +84,13 @@ const Navbar = () => {
                             </svg>
                         </button>
 
-                        <NavLink to={ROUTES.HOME} className="flex flex-col items-center justify-center">
-                            <img src="/logo.png" alt="logo company" className='size-18'/>
-                        </NavLink>
+                        {/*<NavLink to={ROUTES.HOME} className="flex flex-col items-center justify-center">*/}
+                        {/*    <img src="/logo.png" alt="logo company" className='size-18'/>*/}
+                        {/*</NavLink>*/}
                     </div>
 
                     <div
-                        className={`$ ${isMobileMenuOpen ? 'block' : 'hidden'} w-full  md:block md:w-auto md:bg-transparent xs:bg-black md:dark:bg-transparent xs:dark:bg-gray-900`}
+                        className={`$ ${isMobileMenuOpen ? 'block' : 'hidden'} w-full py-5  md:block md:w-auto md:bg-transparent xs:bg-black xs:dark:bg-gray-900`}
                         id="mobile-dropdown">
                         <ul className="flex flex-col font-medium p-4 md:p-0 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                             <li>

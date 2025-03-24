@@ -6,6 +6,7 @@ import ModalWindow from "../ModalWindow/ModalWindow.jsx";
 
 const Footer = () => {
     const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+    const year = new Date().getFullYear();
 
     // Function to open the modal
     const openModal = () => {
@@ -20,15 +21,15 @@ const Footer = () => {
     return (
         <footer className="bg-[url(/footerBg.jpg)] bg-no-repeat bg-cover">
             <div className="mx-auto w-full max-w-screen-xl">
-                <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
+                <div className="text-center grid grid-cols-1 gap-8 px-4 py-6">
+                    {/*<div>*/}
+                    {/*    <img src="/logo.png" alt="logo" className='size-32'/>*/}
+                    {/*</div>*/}
                     <div>
-                        <img src="/logo.png" alt="logo" className='size-32'/>
-                    </div>
-                    <div>
-                        <h2 className="mb-6 text-lg font-semibold uppercase">
-                            О компании
-                        </h2>
-                        <ul className="font-medium">
+                        {/*<h2 className="mb-6 text-lg font-semibold uppercase">*/}
+                        {/*    О компании*/}
+                        {/*</h2>*/}
+                        <ul className="font-medium flex flex-wrap items-center justify-center gap-10 pt-20">
                             <li className="mb-4">
                                 <NavLink to={ROUTES.HOME} className="hover:underline"
                                          onClick={() => { handleClick(); openModal(); }}>
@@ -60,6 +61,10 @@ const Footer = () => {
                                 </NavLink>
                             </li>
                         </ul>
+                    </div>
+                    <div className='font-semibold'>
+                        © {year}.
+                        Все права защищены
                     </div>
                 </div>
             </div>

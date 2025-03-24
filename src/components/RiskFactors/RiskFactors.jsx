@@ -7,7 +7,7 @@ const RiskFactors = () => {
             <Parallax speed={-20} className="absolute inset-0 w-full h-full">
                 <img src="/bg.jpg" alt="Background" className="w-full h-full object-cover"/>
             </Parallax>
-            <div className="relative z-10 w-full flex flex-col justify-center items-center mx-auto">
+            <div className="container relative z-10 w-full flex flex-col justify-center items-center mx-auto">
                 <h2 className="text-4xl mb-10 text-center">
                     Факторы риска заболеваний молочных желез
                 </h2>
