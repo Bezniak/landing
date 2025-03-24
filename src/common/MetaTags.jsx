@@ -1,28 +1,32 @@
-import React from "react";
-import {Helmet} from "react-helmet-async";
-import {useTranslation} from "react-i18next";
+import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import PropTypes from "prop-types";
 
-const MetaTags = ({page = "", syncTitle = "", syncDescription = ""}) => {
-    const {t} = useTranslation();
-
-    // Используем переданные значения или fallback на локализацию
-    const title = t(`${page}.title`);
-    const description = t(`${page}.description`);
+const MetaTags = ({ title, description, keywords }) => {
+    useEffect(() => {
+        document.title = title; // Мгновенно обновляем заголовок страницы
+    }, [title]); // Следим за изменением title
 
     return (
         <Helmet>
-            <title>{title}</title>
-            <meta name="description" content={description}/>
+            <meta name="description" content={description} />
+            {keywords && <meta name="keywords" content={keywords} />}
         </Helmet>
     );
 };
 
-// Добавление проверки типов
+// Проверка типов пропсов
 MetaTags.propTypes = {
-    page: PropTypes.string,  // Локализованная страница
-    syncTitle: PropTypes.string,  // Синхронный заголовок
-    syncDescription: PropTypes.string,  // Синхронное описание
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    keywords: PropTypes.string,
+};
+
+// Значения по умолчанию
+MetaTags.defaultProps = {
+    title: "Заголовок страницы",
+    description: "Описание страницы по умолчанию",
+    keywords: "",
 };
 
 export default MetaTags;

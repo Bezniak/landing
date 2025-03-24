@@ -4,12 +4,12 @@ import Mastopathy from "./Mastopathy.jsx";
 import PmsMastopathyDiagnosis from "./PmsMastopathyDiagnosis.jsx";
 import BreastPainTreatment from "./BreastPainTreatment.jsx";
 import Advice from "./Advice.jsx";
-import HelmetWrapper from "../../common/HelmetWrapper.jsx";
+import MetaTags from "../../common/MetaTags.jsx";
 
 const PmsAndMastopathy = () => {
     return (
         <>
-            <HelmetWrapper
+            <MetaTags
                 title="Болезненность в молочных железах как проявление предменструального мастопатического синдрома"
                 description="Узнайте о причинах, симптомах и методах лечения болезненности молочных желез, связанной с предменструальным мастопатическим синдромом (ПМС-мастопатией)."
                 keywords="предменструальный мастопатический синдром, ПМС-мастопатия, болезненность молочных желез, мастопатия, лечение, диагностика, гормональный дисбаланс, УЗИ молочных желез"

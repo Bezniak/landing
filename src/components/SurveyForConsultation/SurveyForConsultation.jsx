@@ -1,12 +1,12 @@
 import React from 'react';
 import TestForm from "../TestForm/TestForm.jsx";
 import {motion} from "framer-motion";
-import HelmetWrapper from "../../common/HelmetWrapper.jsx";
+import MetaTags from "../../common/MetaTags.jsx";
 
 const SurveyForConsultation = () => {
     return (
         <div>
-            <HelmetWrapper
+            <MetaTags
                 title="Кому нужна консультация маммолога: пройдите опрос"
                 description="Заполните анкету, чтобы предварительно оценить необходимость консультации маммолога. Поможет определить риски и спланировать обследование."
                 keywords="маммолог, консультация врача, здоровье груди, рак молочной железы, УЗИ молочных желез, маммография, анкета, диагностика, профилактика"

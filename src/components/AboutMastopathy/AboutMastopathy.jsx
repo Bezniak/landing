@@ -1,7 +1,7 @@
 import React from 'react';
 import {motion} from "framer-motion";
 import FAQAccordion from "../UltrasoundDiagnostics/FAQAccordion.jsx";
-import HelmetWrapper from "../../common/HelmetWrapper.jsx";
+import MetaTags from "../../common/MetaTags.jsx";
 
 // FAQ Data
 const faqData = [
@@ -29,7 +29,7 @@ const InfoCard = ({imageSrc, text}) => (
 const AboutMastopathy = () => {
     return (
         <>
-            <HelmetWrapper
+            <MetaTags
                 title="Мастопатия: симптомы, причины и лечение"
                 description="Узнайте о мастопатии: ее симптомах, причинах, методах диагностики и эффективном лечении. Также читайте о роли антиоксидантов в профилактике мастопатии."
                 keywords="мастопатия, фиброзно-кистозная мастопатия, причины мастопатии, симптомы мастопатии, лечение мастопатии, диагностика мастопатии, антиоксиданты, профилактика мастопатии"

@@ -5,8 +5,7 @@ import Findings from "./Findings.jsx";
 import Steps from "./Steps.jsx";
 import FAQAccordion from "./FAQAccordion.jsx";
 import Summary from "./Summary.jsx";
-import HelmetWrapper from "../../common/HelmetWrapper.jsx";
-
+import MetaTags from "../../common/MetaTags.jsx";
 
 
 const faqItems = [
@@ -32,7 +31,7 @@ const faqItems = [
 const UltrasoundDiagnostics = () => {
     return (
         <>
-            <HelmetWrapper
+            <MetaTags
                 title="УЗИ молочных желез: расшифровка результатов и ключевые термины"
                 description="Разбираем медицинские термины УЗИ молочной железы: эхогенность, кисты, фиброаденомы, мастопатию и другие находки. Узнайте, как понять заключение врача и когда стоит обратиться к маммологу."
                 keywords="УЗИ молочной железы, эхогенность, кисты груди, фиброаденома, мастопатия, диагностика груди, женское здоровье, расшифровка УЗИ, маммология, профилактика заболеваний груди"

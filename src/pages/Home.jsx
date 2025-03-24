@@ -9,12 +9,12 @@ import DiagnosticMethods from "../components/DiagnosticMethods/DiagnosticMethods
 import BreastHealthTips from "../components/BreastHealthTips/BreastHealthTips.jsx";
 import AdditionalFacts from "../components/AdditionalFacts/AdditionalFacts.jsx";
 import Conclusion from "../components/Conclusion/Conclusion.jsx";
-import HelmetWrapper from "../common/HelmetWrapper.jsx";
+import MetaTags from "../common/MetaTags.jsx";
 
 const Home = () => {
     return (
         <>
-            <HelmetWrapper
+            <MetaTags
                 title="Здоровье молочных желез: советы по профилактике и диагностике"
                 description="Узнайте, как заботиться о здоровье молочных желез: основные заболевания, методы диагностики, самообследование и профилактика. Важная информация для каждой женщины."
                 keywords="молочные железы, здоровье груди, рак груди, профилактика заболеваний груди, самообследование, маммография, диагностика груди, женское здоровье, узлы в груди, лечение мастопатии"
