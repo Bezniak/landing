@@ -90,7 +90,7 @@ const Navbar = () => {
                     </div>
 
                     <div
-                        className={`$ ${isMobileMenuOpen ? 'block' : 'hidden'} w-full py-5  md:block md:w-auto md:bg-transparent xs:bg-black xs:dark:bg-gray-900`}
+                        className={`$ ${isMobileMenuOpen ? 'block' : 'hidden'} w-full py-5  md:block md:w-auto md:bg-transparent bg-white xs:dark:bg-gray-900`}
                         id="mobile-dropdown">
                         <ul className="flex flex-col font-medium p-4 md:p-0 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                             <li>
@@ -98,7 +98,7 @@ const Navbar = () => {
                                     to={ROUTES.BREAST_HEALTH}
                                     onClick={() => {
                                         setIsMobileMenuOpen(false);
-                                        openModal();
+                                        // openModal();
                                     }}
                                     className="block py-2 px-3 rounded md:border-0 md:p-0 text-black transition"
                                 >
@@ -110,7 +110,7 @@ const Navbar = () => {
                                     to={ROUTES.PMS_MASTOPATHY}
                                     onClick={() => {
                                         setIsMobileMenuOpen(false);
-                                        openModal();
+                                        // openModal();
                                     }}
                                     className="block py-2 px-3 rounded md:border-0 md:p-0 text-black transition"
                                 >
@@ -122,7 +122,7 @@ const Navbar = () => {
                                     to={ROUTES.ABOUT_MASTOPATHY}
                                     onClick={() => {
                                         setIsMobileMenuOpen(false);
-                                        openModal();
+                                        // openModal();
                                     }}
                                     className="block py-2 px-3 rounded md:border-0 md:p-0 text-black transition"
                                 >
@@ -134,7 +134,7 @@ const Navbar = () => {
                                     to={ROUTES.ULTRASOUND_DIAGNOSTICS}
                                     onClick={() => {
                                         setIsMobileMenuOpen(false);
-                                        openModal();
+                                        // openModal();
                                     }}
                                     className="block py-2 px-3 rounded md:border-0 md:p-0 text-black transition"
                                 >
@@ -146,7 +146,7 @@ const Navbar = () => {
                                     to={ROUTES.SURVEY_FOR_CONSULTATION}
                                     onClick={() => {
                                         setIsMobileMenuOpen(false);
-                                        openModal();
+                                        // openModal();
                                     }}
                                     className="block py-2 px-3 rounded md:border-0 md:p-0 text-black transition"
                                 >

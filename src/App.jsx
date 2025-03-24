@@ -83,10 +83,6 @@ const App = () => {
                     element: <NotFound/>
                 },
                 {
-                    path: ROUTES.BREAST_HEALTH,
-                    element: <BreastHealth/>
-                },
-                {
                     path: ROUTES.PMS_MASTOPATHY,
                     element: <PMSAndMastopathy/>
                 },

@@ -1,10 +1,17 @@
 import React from 'react';
 import TestForm from "../TestForm/TestForm.jsx";
 import {motion} from "framer-motion";
+import HelmetWrapper from "../../common/HelmetWrapper.jsx";
 
 const SurveyForConsultation = () => {
     return (
         <div>
+            <HelmetWrapper
+                title="Кому нужна консультация маммолога: пройдите опрос"
+                description="Заполните анкету, чтобы предварительно оценить необходимость консультации маммолога. Поможет определить риски и спланировать обследование."
+                keywords="маммолог, консультация врача, здоровье груди, рак молочной железы, УЗИ молочных желез, маммография, анкета, диагностика, профилактика"
+            />
+
             <div className="relative overflow-hidden w-screen h-screen flex items-center justify-center">
                 {/* Анимированное изображение */}
                 <motion.img

@@ -47,15 +47,15 @@ const ModalWindow = ({closeModal}) => {
                         <div className="space-y-2">
                             {store.slice(1).map((pharmacy) => (
                                 <div key={pharmacy.id} className="border-b border-gray-300 pb-4">
-                                    <h4 className="text-lg font-semibold text-gray-900">
+                                    <h4 className="text-xl pb-2 font-semibold text-gray-900">
                                         {pharmacy.pharmacyName}
                                     </h4>
-                                    <p className="text-sm text-gray-600">{pharmacy.address}</p>
+                                    <p className="text-sm text-black pb-3 font-light">{pharmacy.address}</p>
                                     <a
                                         href={pharmacy.pharmacyUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-blue-600 hover:underline"
+                                        className="text-blue-600 font-normal hover:underline"
                                     >
                                         Перейти на сайт
                                     </a>
