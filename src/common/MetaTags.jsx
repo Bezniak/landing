@@ -22,6 +22,7 @@ MetaTags.propTypes = {
     keywords: PropTypes.string,
 };
 
+
 // Значения по умолчанию
 MetaTags.defaultProps = {
     title: "Заголовок страницы",
