@@ -1,9 +1,21 @@
-import React from 'react';
-import {NavLink} from "react-router-dom";
-import {ROUTES} from "../../config/routes.js";
-import {handleClick} from "../../common/helpers.js";
+import React, { useState } from 'react';
+import { NavLink } from "react-router-dom";
+import { ROUTES } from "../../config/routes.js";
+import { handleClick } from "../../common/helpers.js";
+import ModalWindow from "../ModalWindow/ModalWindow.jsx";
 
 const Footer = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+
+    // Function to open the modal
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    // Function to close the modal
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     return (
         <footer className="bg-[url(/footerBg.jpg)] bg-no-repeat bg-cover">
@@ -19,31 +31,31 @@ const Footer = () => {
                         <ul className="font-medium">
                             <li className="mb-4">
                                 <NavLink to={ROUTES.HOME} className="hover:underline"
-                                         onClick={handleClick}>
+                                         onClick={() => { handleClick(); openModal(); }}>
                                     Здоровье груди
                                 </NavLink>
                             </li>
                             <li className="mb-4">
                                 <NavLink to={ROUTES.PMS_MASTOPATHY} className="hover:underline"
-                                         onClick={handleClick}>
+                                         onClick={() => { handleClick(); openModal(); }}>
                                     ПМС и мастопатия
                                 </NavLink>
                             </li>
                             <li className="mb-4">
                                 <NavLink to={ROUTES.ABOUT_MASTOPATHY} className="hover:underline"
-                                         onClick={handleClick}>
+                                         onClick={() => { handleClick(); openModal(); }}>
                                     О мастопатии
                                 </NavLink>
                             </li>
                             <li className="mb-4">
                                 <NavLink to={ROUTES.ULTRASOUND_DIAGNOSTICS} className="hover:underline"
-                                         onClick={handleClick}>
+                                         onClick={() => { handleClick(); openModal(); }}>
                                     Диагностика УЗИ
                                 </NavLink>
                             </li>
                             <li className="mb-4">
                                 <NavLink to={ROUTES.SURVEY_FOR_CONSULTATION} className="hover:underline"
-                                         onClick={handleClick}>
+                                         onClick={() => { handleClick(); openModal(); }}>
                                     Опрос для консультации
                                 </NavLink>
                             </li>
@@ -51,8 +63,10 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </footer>
 
+            {/* Conditional rendering of the modal */}
+            {isModalOpen && <ModalWindow closeModal={closeModal} />}
+        </footer>
     );
 };
 
