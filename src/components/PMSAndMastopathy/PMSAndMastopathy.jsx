@@ -3,6 +3,7 @@ import {motion} from "framer-motion";
 import Mastopathy from "./Mastopathy.jsx";
 import PmsMastopathyDiagnosis from "./PmsMastopathyDiagnosis.jsx";
 import BreastPainTreatment from "./BreastPainTreatment.jsx";
+import Advice from "./Advice.jsx";
 
 const PmsAndMastopathy = () => {
     return (
@@ -31,6 +32,7 @@ const PmsAndMastopathy = () => {
             <Mastopathy/>
             <PmsMastopathyDiagnosis/>
             <BreastPainTreatment/>
+            <Advice/>
         </div>
     );
 };

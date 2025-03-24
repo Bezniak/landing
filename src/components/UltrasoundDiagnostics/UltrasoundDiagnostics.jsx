@@ -1,10 +1,32 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // Import motion from framer-motion
+import {motion} from 'framer-motion'; // Import motion from framer-motion
 import Terms from "./Terms.jsx";
 import Findings from "./Findings.jsx";
 import Steps from "./Steps.jsx";
-import FaqItems from "./FaqItems.jsx";
+import FAQAccordion from "./FAQAccordion.jsx";
 import Summary from "./Summary.jsx";
+
+
+
+const faqItems = [
+    {
+        question: "У меня нашли «простую кисту» размером 10 мм, это опасно?",
+        answer: "Простые кисты, как правило, доброкачественные. Большинство небольших кист не требуют лечения, только наблюдения. Врач может назначить повторное УЗИ через 6–12 месяцев, чтобы убедиться, что киста не растёт и не изменяется."
+    },
+    {
+        question: "Может ли фиброаденома превратиться в рак?",
+        answer: "Фиброаденомы крайне редко перерождаются в злокачественные опухоли. Обычно их удаляют только при быстром росте, подозрительных признаках или из эстетических соображений. Окончательное решение принимает врач после дополнительных исследований."
+    },
+    {
+        question: "На УЗИ написано «фиброзно-кистозные изменения», но врач сказал, что это не страшно. Это правда?",
+        answer: "Фиброзно-кистозная мастопатия – одно из самых распространённых доброкачественных изменений. Оно не является «серьёзным» заболеванием, но важно наблюдать динамику и вовремя проверяться у маммолога."
+    },
+    {
+        question: "Нужно ли мне проходить маммографию, если я сделала УЗИ?",
+        answer: "Зависит от возраста и рекомендаций врача. Обычно женщинам старше 40 лет советуют делать маммографию регулярно (раз в 1-2 года), а УЗИ дополняет эту диагностику. УЗИ может быть основным методом для более молодых женщин и при плотной структуре груди."
+    }
+];
+
 
 const UltrasoundDiagnostics = () => {
     return (
@@ -35,11 +57,12 @@ const UltrasoundDiagnostics = () => {
 
             <motion.div
                 className='container mx-auto flex flex-col md:flex-row justify-between items-center gap-10 my-10 p-4 md:my-32'
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 1, delay: 0.5}}
             >
-                <motion.div className='flex-1' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
+                <motion.div className='flex-1' initial={{opacity: 0}} animate={{opacity: 1}}
+                            transition={{duration: 1, delay: 1}}>
                     <p>
                         <span className='font-semibold'>Ультразвуковое исследование (УЗИ) молочной железы</span> –
                         один
@@ -50,7 +73,8 @@ const UltrasoundDiagnostics = () => {
                         выражения и диагнозы, которые могут встретиться в вашем УЗИ-протоколе.
                     </p>
                 </motion.div>
-                <motion.div className='flex-1' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.2 }}>
+                <motion.div className='flex-1' initial={{opacity: 0}} animate={{opacity: 1}}
+                            transition={{duration: 1, delay: 1.2}}>
                     <p>
                         <span className='font-semibold text-red-500'>Важно:</span> данный материал носит лишь
                         ознакомительный характер и не отменяет визит к специалисту. Всегда обсуждайте результаты УЗИ с
@@ -60,11 +84,11 @@ const UltrasoundDiagnostics = () => {
             </motion.div>
 
             {/* The rest of your sections */}
-            <Terms />
-            <Findings />
-            <Steps />
-            <FaqItems />
-            <Summary />
+            <Terms/>
+            <Findings/>
+            <Steps/>
+            <FAQAccordion faqItems={faqItems}/>
+            <Summary/>
         </>
     );
 };
