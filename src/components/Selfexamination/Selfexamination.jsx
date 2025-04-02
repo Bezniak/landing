@@ -1,13 +1,9 @@
 import React from 'react';
-import {GiMirrorMirror} from 'react-icons/gi';
-import {BsPersonStanding} from 'react-icons/bs';
-import {PiCouchThin} from 'react-icons/pi';
-import {IoBodySharp} from 'react-icons/io5';
 import {motion} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
-import {TiTick} from "react-icons/ti";
+import {Parallax} from "react-scroll-parallax";
 
-const StepCard = ({Icon, title, steps}) => {
+export const StepCard = ({Icon, title, steps}) => {
     const {ref, inView} = useInView({
         triggerOnce: false, // Ensures animation triggers every time it enters the view
         threshold: 0.3, // Trigger animation when 30% of the component is in the view
@@ -19,15 +15,15 @@ const StepCard = ({Icon, title, steps}) => {
             initial={{opacity: 0, y: 50}}
             animate={{opacity: inView ? 1 : 0, y: inView ? 0 : 50}}
             transition={{duration: 1}}
-            className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+            className="bg-white"
         >
-            <Icon className="size-19 fill-pink-200 mb-5"/>
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+            <img src={Icon} alt="img" className='w-full'/>
+            <h5 className="my-3 text-2xl font-semibold tracking-tight text-gray-900 ">
                 {title}
             </h5>
-            <ul className="mb-3 font-normal text-gray-500 dark:text-gray-400">
+            <ul className="text-lg font-normal text-gray-500">
                 {steps.map((step, index) => (
-                    <li key={index} className="text-sm text-justify mb-5">
+                    <li key={index} className="text-left mb-2">
                         {step}
                     </li>
                 ))}
@@ -39,23 +35,7 @@ const StepCard = ({Icon, title, steps}) => {
 const Selfexamination = () => {
     const steps = [
         {
-            icon: GiMirrorMirror,
-            title: "Осмотр перед зеркалом",
-            steps: [
-                "Станьте прямо с опущенными руками и внимательно посмотрите, нет ли изменений формы груди, асимметрии, изменений цвета или текстуры кожи.",
-                "Поднимите руки вверх и снова осмотрите грудь. Обратите внимание на втяжение кожи или соска, появление «апельсиновой корки» и необычные складки."
-            ]
-        },
-        {
-            icon: BsPersonStanding,
-            title: "Пальпация (ощупывание) стоя",
-            steps: [
-                "Подушечками пальцев аккуратно ощупывайте грудь по кругу, двигаясь от внешнего края груди к соску.",
-                "Проверьте, нет ли уплотнений, узелков или болезненных участков."
-            ]
-        },
-        {
-            icon: PiCouchThin,
+            icon: '/lycomat_12.png',
             title: "Пальпация лёжа",
             steps: [
                 "Лягте на спину, положив одну руку за голову, а другой рукой ощупывайте противоположную грудь.",
@@ -63,7 +43,22 @@ const Selfexamination = () => {
             ]
         },
         {
-            icon: IoBodySharp,
+            icon: '/lycomat_13.png',
+            title: "Пальпация (ощупывание) стоя",
+            steps: [
+                "Подушечками пальцев аккуратно ощупывайте грудь по кругу, двигаясь от внешнего края груди к соску.",
+                "Проверьте, нет ли уплотнений, узелков или болезненных участков."
+            ]
+        },
+        {
+            icon: '/lycomat_0.png',
+            title: "Осмотр перед зеркалом",
+            steps: [
+                "Встаньте прямо, опустив руки, и осмотрите грудь на изменения формы, цвета или текстуры кожи. Затем поднимите руки и проверьте втяжение кожи, соска, «апельсиновую корку» и необычные складки.",
+            ]
+        },
+        {
+            icon: '/lycomat_14.png',
             title: "Проверка сосков",
             steps: [
                 "Слегка сожмите сосок, чтобы проверить, нет ли выделений (кровянистых, прозрачных или гнойных)."
@@ -72,51 +67,55 @@ const Selfexamination = () => {
     ];
 
     return (
-        <div className="container mx-auto py-10 md:py-20 p-4">
+        <div className="container mx-auto py-10 p-4">
             <h2 className="text-4xl mb-5 text-center">Самообследование молочных желез</h2>
-            <p className="text-center leading-10 mx-auto">
+            <p className="text-center mx-auto mb-10">
                 Регулярное самообследование – простая, но важная практика, позволяющая вовремя заметить возможные
                 изменения. Рекомендуется проводить его ежемесячно, примерно через 5–10 дней после начала менструации
                 (когда гормональный фон наиболее стабилен и грудь менее отёчная).
             </p>
-            <h3 className="font-semibold text-2xl my-10">Шаги самообследования:</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {steps.map((step, index) => (
                     <StepCard key={index} Icon={step.icon} title={step.title} steps={step.steps}/>
                 ))}
             </div>
-            <div>
-                <h2 className="text-4xl mt-20  text-center">
-                    Когда нужно обращаться к маммологу или гинекологу:
-                </h2>
-                <ul className='mt-10 text-justify md:text-left'>
-                    <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
-                        Обнаружение любых уплотнений или узелков, особенно если они не исчезают в течение нескольких
-                        недель.
-                    </li>
-                    <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
-                        Постоянная боль или дискомфорт, не связанные с менструальным циклом.
-                    </li>
-                    <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
-                        Изменения кожи (покраснение, шелушение, втягивание) или формы соска.
-                    </li>
-                    <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
-                        Любые выделения из сосков (особенно кровянистые).
-                    </li>
-                    <li className='flex items-center gap-5'>
-                        <TiTick className='w-8 h-8 fill-pink-200 shrink-0'/>
-                        Возникновение резкой асимметрии или изменения формы груди.
-                    </li>
-                </ul>
-                <p className='mt-10 text-justify'>
-                    <span className='text-red-500 font-semibold'>Важно:</span> Самообследование не заменяет регулярные
-                    осмотры у специалиста и инструментальные методы диагностики, но может помочь вовремя заметить
-                    настораживающие симптомы.
-                </p>
+            <div
+                className='container mx-auto md:p-0 py-10 md:py-20 flex flex-col md:flex-row justify-evenly items-center gap-10'>
+                <div className='md:w-1/2 md:px-10'>
+                    <h2 className="text-4xl text-left">
+                        Когда нужно обращаться к маммологу или гинекологу
+                    </h2>
+                    <ul className='mt-10 text-justify md:text-left'>
+                        <li className='flex items-center gap-5 mb-3 text-lg text-gray-500'>
+                            Обнаружение любых уплотнений или узелков, особенно если они не исчезают в течение нескольких
+                            недель.
+                        </li>
+                        <li className='flex items-center gap-5 mb-3 text-lg text-gray-500'>
+                            Постоянная боль или дискомфорт, не связанные с менструальным циклом.
+                        </li>
+                        <li className='flex items-center gap-5 mb-3 text-lg text-gray-500'>
+                            Изменения кожи (покраснение, шелушение, втягивание) или формы соска.
+                        </li>
+                        <li className='flex items-center gap-5 mb-3 text-lg text-gray-500'>
+                            Любые выделения из сосков (особенно кровянистые).
+                        </li>
+                        <li className='flex items-center gap-5 mb-3 text-lg text-gray-500'>
+                            Возникновение резкой асимметрии или изменения формы груди.
+                        </li>
+                    </ul>
+                    <p className='mt-10 !text-lg'>
+                        <span className='text-red-500 font-semibold'>Важно:</span> Самообследование не заменяет
+                        регулярные
+                        осмотры у специалиста и инструментальные методы диагностики, но может помочь вовремя заметить
+                        настораживающие симптомы.
+                    </p>
+                </div>
+                <div className="w-full md:w-1/2 flex justify-center overflow-hidden relative h-fit">
+                    <Parallax translateY={[-50, 50]}>
+                        <img src="/lycomat_17.png" alt="image"
+                             className="md:max-w-xl h-auto object-cover rounded-full"/>
+                    </Parallax>
+                </div>
             </div>
         </div>
     );

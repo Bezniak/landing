@@ -4,7 +4,6 @@ import NotFound from "./components/NotFound/NotFound.jsx";
 import Home from "./pages/Home.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
-import BreastHealth from "./components/BreastHealth/BreastHealth.jsx";
 import PMSAndMastopathy from "./components/PMSAndMastopathy/PMSAndMastopathy.jsx";
 import AboutMastopathy from "./components/AboutMastopathy/AboutMastopathy.jsx";
 import UltrasoundDiagnostics from "./components/UltrasoundDiagnostics/UltrasoundDiagnostics.jsx";
@@ -23,9 +22,6 @@ const Layout = () => {
         const openModal = () => {
             setIsModalOpen(true);
         };
-
-        // Show the modal immediately when the app is loaded
-        openModal();
 
         // Set interval to show modal every 1 minute (60000 ms)
         const intervalId = setInterval(openModal, 60000);
@@ -57,11 +53,12 @@ const Layout = () => {
             {/* Floating Action Button */}
             <button
                 onClick={openModalHandler}
-                className="fixed bottom-10 right-10 bg-pink-300 text-white p-4 rounded-full shadow-lg hover:bg-pink-500 transition focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="fixed bottom-10 right-10 bg-white text-red-500 p-4 rounded-full shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-300 hover:bg-red-500 hover:text-white"
                 title="Show Pharmacies"
             >
-                <FaPlusCircle size={32}/>
+                <FaPlusCircle size={32} className="transition"/>
             </button>
+
         </div>
     );
 };

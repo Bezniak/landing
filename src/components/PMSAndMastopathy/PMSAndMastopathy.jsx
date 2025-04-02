@@ -5,6 +5,7 @@ import PmsMastopathyDiagnosis from "./PmsMastopathyDiagnosis.jsx";
 import BreastPainTreatment from "./BreastPainTreatment.jsx";
 import Advice from "./Advice.jsx";
 import MetaTags from "../../common/MetaTags.jsx";
+import GoodAdvice from "./GoodAdvice.jsx";
 
 const PmsAndMastopathy = () => {
     return (
@@ -18,7 +19,7 @@ const PmsAndMastopathy = () => {
                 <div className="relative overflow-hidden w-screen h-screen flex items-center justify-center">
                     {/* Анимированное изображение */}
                     <motion.img
-                        src="/bg-pms.jpg"
+                        src="/page2.png"
                         alt="background slide"
                         className="absolute inset-0 w-full h-full object-cover"
                         initial={{scale: 2}}
@@ -39,6 +40,7 @@ const PmsAndMastopathy = () => {
                 <Mastopathy/>
                 <PmsMastopathyDiagnosis/>
                 <BreastPainTreatment/>
+                <GoodAdvice/>
                 <Advice/>
             </div>
         </>

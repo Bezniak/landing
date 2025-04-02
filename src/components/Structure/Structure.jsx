@@ -23,34 +23,33 @@ const Structure = () => {
                 whileInView="visible"
                 viewport={{once: false, amount: 0.2}}
             >
-                <motion.h2 className="text-4xl mb-10 text-center" variants={textVariants}>
-                    Строение и функции молочной железы
-                </motion.h2>
-
                 <ul>
-                    <motion.span className="font-semibold" variants={textVariants}>
-                        Молочная железа состоит из нескольких типов тканей:
+                    <motion.span className="font-semibold text-4xl" variants={textVariants}>
+                        Строение и функции молочной железы
                     </motion.span>
-                    <motion.li className="flex gap-4 items-center mb-5 mt-8" variants={listItemVariants}>
-                        <TiTickOutline className="size-8 fill-pink-200 flex-shrink-0"/>
+                    <motion.li className="flex gap-4 items-start my-5 text-xl !font-light text-gray-500"
+                               variants={listItemVariants}>
+                        <TiTickOutline className="size-8 fill-[var(--red)] flex-shrink-0"/>
                         Железистая ткань отвечает за производство грудного молока и состоит из долек (альвеол) и
                         протоков, по которым молоко транспортируется к соскам.
                     </motion.li>
-                    <motion.li className="flex gap-4 items-center mb-5" variants={listItemVariants}>
-                        <TiTickOutline className="size-8 fill-pink-200 flex-shrink-0"/>
+                    <motion.li className="flex gap-4 items-start my-5 text-xl !font-light text-gray-500"
+                               variants={listItemVariants}>
+                        <TiTickOutline className="size-8 fill-[var(--red)] flex-shrink-0"/>
                         Жировая ткань окружает железистую, придавая груди форму и объем.
                     </motion.li>
-                    <motion.li className="flex gap-4 items-center mb-5" variants={listItemVariants}>
-                        <TiTickOutline className="size-8 fill-pink-200 flex-shrink-0"/>
+                    <motion.li className="flex gap-4 items-start my-5 text-xl !font-light text-gray-500"
+                               variants={listItemVariants}>
+                        <TiTickOutline className="size-8 fill-[var(--red)] flex-shrink-0"/>
                         Соединительная ткань обеспечивает поддержку и структурную целостность железы.
                     </motion.li>
                 </ul>
-                <motion.p className="text-justify my-10" variants={textVariants}>
+                <motion.p className="text-left mt-10 my-5" variants={textVariants}>
                     Соотношение этих тканей может меняться в зависимости от возраста, фазы менструального цикла,
                     беременности, лактации, а также в период менопаузы. Например, в молодом возрасте железистая ткань
                     преобладает, а с возрастом её место постепенно занимает жировая.
                 </motion.p>
-                <motion.p className="text-justify" variants={textVariants}>
+                <motion.p className="text-left" variants={textVariants}>
                     Основные функции молочной железы – это выработка и выделение молока в период грудного вскармливания,
                     а также эндокринная регуляция (соучастие в выработке ряда гормонов).
                 </motion.p>
@@ -59,7 +58,7 @@ const Structure = () => {
             {/* Ограничиваем блок и создаем плавный вертикальный параллакс */}
             <div className="md:w-1/2 flex justify-center overflow-hidden relative h-fit">
                 <Parallax translateY={[-50, 50]}>
-                    <img src="/img_1.png" alt="image" className="max-w-full h-auto object-cover"/>
+                    <img src="/lycomat_3.png" alt="image" className="max-w-full h-auto object-cover rounded-full"/>
                 </Parallax>
             </div>
         </div>

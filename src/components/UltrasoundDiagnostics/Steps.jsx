@@ -39,16 +39,16 @@ const Steps = () => {
             </Parallax>
             {/* Content block, above the background */}
             <div className="space-y-6 mt-10 relative z-10">
-                <h2 className="text-4xl mb-10 text-center">
+                <h2 className="text-4xl mb-10 pt-10 text-center">
                     Что делать после УЗИ?
                 </h2>
                 {steps.map((step, index) => (
                     <div
                         key={index}
-                        className="container mx-auto flex items-center bg-transparent p-6 rounded-2xl hover:shadow-xl transition duration-300"
+                        className="container mx-auto flex items-center bg-transparent p-6 rounded-2xl"
                     >
                         <div
-                            className="flex items-center justify-center w-14 h-14 border border-gray-300 bg-pink-100 text-gray-900 font-bold text-2xl rounded-full">
+                            className="flex items-center justify-center w-14 h-14 p-5 border border-gray-300 bg-[var(--green)] text-gray-900 font-bold text-2xl rounded-full">
                             {step.number}
                         </div>
                         <div className="ml-6">

@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import React, {useEffect} from "react";
+import {Helmet} from "react-helmet-async";
 import PropTypes from "prop-types";
 
-const MetaTags = ({ title, description, keywords }) => {
+const MetaTags = ({title, description, keywords}) => {
     useEffect(() => {
         document.title = title; // Мгновенно обновляем заголовок страницы
     }, [title]); // Следим за изменением title
 
     return (
         <Helmet>
-            <meta name="description" content={description} />
-            {keywords && <meta name="keywords" content={keywords} />}
+            <meta name="description" content={description}/>
+            {keywords && <meta name="keywords" content={keywords}/>}
         </Helmet>
     );
 };

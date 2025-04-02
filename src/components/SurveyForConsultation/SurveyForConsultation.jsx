@@ -15,7 +15,7 @@ const SurveyForConsultation = () => {
             <div className="relative overflow-hidden w-screen h-screen flex items-center justify-center">
                 {/* Анимированное изображение */}
                 <motion.img
-                    src="/bg-test.jpg"
+                    src="/page5.png"
                     alt="background slide"
                     className="absolute inset-0 w-full h-full object-cover"
                     initial={{scale: 2}}

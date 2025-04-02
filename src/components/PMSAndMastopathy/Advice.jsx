@@ -1,102 +1,82 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
+import {Parallax} from "react-scroll-parallax";
 
 const Advice = () => {
-    const {ref: ref1, inView: inView1} = useInView({triggerOnce: false, threshold: 0.2});
-    const {ref: ref2, inView: inView2} = useInView({triggerOnce: false, threshold: 0.2});
+    const {ref, inView} = useInView({triggerOnce: false, threshold: 0.2});
 
     return (
-        <div className="container mx-auto my-10 md:my-20 p-4">
-            <h2 className="text-4xl mb-10 text-center">
-                Полезные советы женщинам при ПМС-мастопатии
-            </h2>
-            <div className="flex flex-wrap justify-evenly items-center gap-10">
-                {[
-                    {
-                        tips: [
-                            "Носите удобный бюстгальтер без косточек, который хорошо поддерживает, но не сдавливает грудь.",
-                            "Делайте лёгкий массаж груди ежедневно в душе.",
-                            "Используйте тёплые компрессы или мягкий гель с успокаивающим эффектом.",
-                            "Попробуйте пить травяные чаи на основе ромашки или мелиссы, чтобы снизить уровень стресса и напряжения.",
-                            "Откажитесь от курения, так как оно может усиливать симптомы.",
-                            "Ведите дневник симптомов для точного отслеживания изменений и своевременного обращения к врачу."
-                        ],
-                        ref: ref1,
-                        inView: inView1
-                    },
-                ].map((item, index) => (
-                    <motion.div
-                        key={index}
-                        ref={item.ref}
-                        initial={{opacity: 0, y: 50}}
-                        animate={item.inView ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
-                        transition={{duration: 0.8, ease: 'easeOut'}}
-                        className="flex flex-col text-justify"
-                    >
-                        <ul className="list-disc text-gray-700 px-6">
-                            {item.tips.map((tip, tipIndex) => (
-                                <motion.li
-                                    key={tipIndex}
-                                    initial={{opacity: 0}}
-                                    animate={{opacity: 1}}
-                                    transition={{delay: tipIndex * 0.2}}
-                                    className="mb-2"
-                                >
-                                    {tip}
-                                </motion.li>
-                            ))}
-                        </ul>
-                    </motion.div>
-                ))}
+        <div className=" my-10 md:my-20">
+            <div className="relative min-h-screen flex items-center justify-start p-4 overflow-hidden py-10">
+                <Parallax speed={-20} className="absolute inset-0 w-full h-full">
+                    <img src="/lycomat_30.png" alt="Background" className="w-full h-full object-cover"/>
+                </Parallax>
                 <motion.div
-                    ref={ref2}
+                    ref={ref}
                     initial={{opacity: 0, y: 50}}
-                    animate={inView2 ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
+                    animate={inView ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
                     transition={{duration: 0.8, ease: 'easeOut'}}
-                    className="flex flex-col text-justify"
+                    className="container mx-auto p-5 z-10 flex flex-col justify-start items-start"
                 >
-                    <h3 className="text-lg mb-4">
+                    <h2 className="text-2xl md:text-4xl mb-6 md:mb-10">
                         Дополнительные полезные советы и интересные факты:
-                    </h3>
-                    <ul className="list-disc text-gray-700 px-6">
+                    </h2>
+                    <ul className="space-y-4 text-base md:text-lg text-gray-500">
                         <motion.li
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
                             transition={{delay: 0.2}}
-                            className="mb-2"
+                            className="mb-5"
                         >
-                            Холодный компресс: если теплая процедура не помогает, попробуйте приложить к груди прохладный компресс или пакет со льдом, завернутый в полотенце.
+                            <strong className='font-semibold'>
+                                Холодный компресс:
+                            </strong> &nbsp;
+                            если теплая процедура не помогает, попробуйте приложить к груди прохладный компресс или
+                            пакет со льдом, завернутый в полотенце.
                         </motion.li>
                         <motion.li
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
                             transition={{delay: 0.4}}
-                            className="mb-2"
+                            className="mb-5"
                         >
-                            Витамин D: дефицит витамина D может усиливать проявления ПМС-мастопатии, поэтому полезно контролировать его уровень и при необходимости принимать дополнительно.
+                            <strong className='font-semibold'>
+                                Витамин D:
+                            </strong> &nbsp;
+                            дефицит витамина D может усиливать проявления ПМС-мастопатии, поэтому полезно контролировать
+                            его уровень и при необходимости принимать дополнительно.
                         </motion.li>
                         <motion.li
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
                             transition={{delay: 0.6}}
-                            className="mb-2"
+                            className="mb-5"
                         >
-                            Масло примулы вечерней: употребление этого масла показало хороший эффект при снижении симптомов мастопатии.
+                            <strong className='font-semibold'>
+                                Масло примулы вечерней:
+                            </strong> &nbsp;
+                            употребление этого масла показало хороший эффект при снижении симптомов мастопатии.
                         </motion.li>
                         <motion.li
                             initial={{opacity: 0}}
                             animate={{opacity: 1}}
                             transition={{delay: 0.8}}
-                            className="mb-2"
+                            className="mt-6"
                         >
-                            Факт: Исследования показывают, что стресс значительно усиливает болезненность в груди, поэтому регулярное снятие стресса (медитация, дыхательные практики) крайне важно.
+                            <strong className='text-[var(--green)] font-semibold'>
+                                Полезный факт:
+                            </strong>
+                            исследования показывают, что стресс значительно усиливает болезненность в груди, поэтому
+                            регулярное снятие стресса (медитация, дыхательные практики) крайне важно.
                         </motion.li>
                     </ul>
                 </motion.div>
             </div>
-            <p className="text-gray-700 text-center mt-10">
-                ПМС-мастопатия не является опасным заболеванием, но значительно влияет на качество жизни. Поэтому регулярное наблюдение и консультации специалистов помогут своевременно выявить любые отклонения и подобрать оптимальный подход к лечению и профилактике.
+            <p className="bg-gradient-to-r py-20 flex justify-center items-center text-center from-red-900 to-red-700 text-white p-5 relative overflow-hidden">
+                ПМС-мастопатия не является опасным заболеванием, но значительно влияет на качество жизни. Поэтому
+                регулярное наблюдение и консультации специалистов помогут своевременно выявить любые отклонения и
+                подобрать оптимальный подход к лечению и профилактике.
             </p>
         </div>
     );

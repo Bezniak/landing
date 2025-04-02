@@ -8,7 +8,7 @@ const Slider = () => {
         <div className="relative overflow-hidden w-screen h-screen flex items-center justify-center">
             {/* Анимированное изображение */}
             <motion.img
-                src="/homeImg.jpg"
+                src="/lycomat_1.png"
                 alt="background slide"
                 className="absolute inset-0 w-full h-full object-cover"
                 initial={{scale: 2}}
@@ -18,7 +18,7 @@ const Slider = () => {
 
             {/* Анимированный заголовок */}
             <motion.h1
-                className="relative leading-18 z-10 text-black text-3xl md:text-5xl text-center w-[90%] mx-auto"
+                className="relative leading-18 z-10 text-white text-3xl md:text-6xl text-center w-[75%] mx-auto"
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{duration: 2}}

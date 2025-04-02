@@ -39,12 +39,14 @@ const diagnosticMethods = [
 const DiagnosticMethods = () => {
     return (
         <div className="container mx-auto p-4 py-10 md:py-20">
-            <h2 className="text-4xl text-center mb-10">Методы диагностики заболеваний груди</h2>
+            <h2 className="text-4xl mb-10">
+                Методы диагностики заболеваний груди
+            </h2>
             <div className="overflow-hidden">
                 {diagnosticMethods.map((method, index) => (
                     <div key={index} className="mb-3">
                         <button
-                            className="w-full rounded-lg text-left p-4 font-medium text-gray-700 bg-pink-100 hover:bg-pink-200 focus:outline-none transition cursor-pointer"
+                            className="w-full rounded-lg text-left p-4 font-medium text-white bg-linear-to-r/hsl from-green-600 to-green-500 hover:bg-pink-200 focus:outline-none transition cursor-pointer"
                             onClick={() => {
                                 document.getElementById(`content-${index}`).classList.toggle('hidden');
                             }}
@@ -60,9 +62,12 @@ const DiagnosticMethods = () => {
                 ))}
             </div>
             <p className="mt-4 text-sm text-gray-500">
-                <span className='text-red-500 font-semibold'>Важно: </span>
+                <span className='text-[var(--red)] font-semibold'>
+                    Важно:
+                </span>
                 выбор метода диагностики остаётся за врачом, исходя из возраста пациентки, её индивидуальной истории и
-                предположительного диагноза.</p>
+                предположительного диагноза.
+            </p>
         </div>
     );
 };

@@ -1,30 +1,38 @@
 import React from 'react';
-import {store} from "../../store/store.js";
 
 const ModalWindow = ({closeModal}) => {
+
+    // Обработчик клика по кнопке "Купить"
+    const handleBuyButtonClick = () => {
+        // Получаем ID из переменной окружения
+        const yandexMetrikaId = import.meta.env.VITE_YANDEX_METRIKA_ID;
+
+        // Отправка события в Яндекс.Метрику
+        if (yandexMetrikaId) {
+            ym(yandexMetrikaId, 'reachGoal', 'pharmacy_button_click');
+        }
+    };
+
     return (
         <div
             className="fixed inset-0 z-50 bg-[rgba(0,0,0,0.7)] flex justify-center items-center"
-            onClick={closeModal} // Close the modal when clicking on the backdrop
+            onClick={closeModal} // Закрытие модального окна при клике на фон
         >
             <div
-                className="relative p-4 md:w-1/2 max-h-[90vh] bg-white rounded-lg shadow-sm"
-                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+                className="relative p-4 md:w-1/2 max-h-[90vh] bg-white rounded-lg"
+                onClick={(e) => e.stopPropagation()} // Предотвращение закрытия при клике внутри модалки
             >
-                {/* Modal content */}
-                <div className="relative bg-white rounded-lg shadow-sm">
-                    {/* Modal header */}
-                    <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-200">
-                        <h3 className="text-2xl font-semibold text-gray-900">
-                            Купить в аптеках г {store[0].city}
-                        </h3>
+                {/* Содержимое модального окна */}
+                <div className="relative bg-white rounded-lg mb-2">
+                    {/* Заголовок модального окна */}
+                    <div className="flex items-center justify-between">
                         <button
                             type="button"
-                            className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
-                            onClick={closeModal} // Close the modal
+                            className="text-gray-400 absolute top-6 right-3 bg-transparent cursor-pointer hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+                            onClick={closeModal} // Закрытие модалки
                         >
                             <svg
-                                className="w-3 h-3"
+                                className="w-5 h-5"
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -42,38 +50,18 @@ const ModalWindow = ({closeModal}) => {
                         </button>
                     </div>
 
-                    {/* Modal body - pharmacy list */}
-                    <div className="p-4 md:p-5 space-y-4 max-h-[60vh] overflow-y-auto">
-                        <div className="space-y-2">
-                            {store.slice(1).map((pharmacy) => (
-                                <div key={pharmacy.id} className="border-b border-gray-300 pb-4">
-                                    <h4 className="text-xl pb-2 font-semibold text-gray-900">
-                                        {pharmacy.pharmacyName}
-                                    </h4>
-                                    <p className="text-sm text-black pb-3 font-light">{pharmacy.address}</p>
-                                    <a
-                                        href={pharmacy.pharmacyUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-600 font-normal hover:underline"
-                                    >
-                                        Перейти на сайт
-                                    </a>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                    <img src="/lycomatFarmacy.png" alt="lycomat"/>
 
-                    {/* Modal footer */}
-                    <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b">
-                        <button
-                            onClick={closeModal} // Close the modal
-                            type="button"
-                            className="text-black uppercase mx-auto bg-pink-300 hover:bg-pink-400 transition cursor-pointer focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-12 py-3 text-center"
-                        >
-                            Закрыть
-                        </button>
-                    </div>
+                    {/* Кнопка "Купить" с обработчиком клика */}
+                    <a
+                        href="https://tabletka.by/result/?ls=104159"
+                        target="_blank"
+                        className="text-white tracking-widest mb-5 uppercase mx-auto w-fit !font-medium block bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 transition cursor-pointer focus:ring-4 focus:outline-none rounded-lg text-sm px-12 py-3 text-center"
+
+                        onClick={handleBuyButtonClick} // Отправка события при клике
+                    >
+                        Купить
+                    </a>
                 </div>
             </div>
         </div>

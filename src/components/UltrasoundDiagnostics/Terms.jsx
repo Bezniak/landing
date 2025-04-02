@@ -62,14 +62,14 @@ const Terms = () => {
         <div className="container mx-auto p-6">
             <h2 className="text-4xl mb-10 text-center">Общие термины в УЗИ молочной железы</h2>
             {terms.map((section, index) => (
-                <Section key={index} section={section} />
+                <Section key={index} section={section}/>
             ))}
         </div>
     );
 };
 
-const Section = ({ section }) => {
-    const { ref, inView } = useInView({
+const Section = ({section}) => {
+    const {ref, inView} = useInView({
         triggerOnce: false,
         threshold: 0.2,
     });
@@ -77,20 +77,20 @@ const Section = ({ section }) => {
     return (
         <motion.div
             ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ duration: 1 }}
+            initial={{opacity: 0}}
+            animate={{opacity: inView ? 1 : 0}}
+            transition={{duration: 1}}
             className="mb-6"
         >
-            <h2 className="text-xl font-semibold text-pink-400 mb-2">{section.title}</h2>
+            <h2 className="text-xl font-semibold text-[var(--green)] mb-2">{section.title}</h2>
             <ul className="space-y-3">
                 {section.items.map((item, idx) => (
                     <motion.li
                         key={idx}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: inView ? 1 : 0 }}
-                        transition={{ duration: 0.7, delay: idx * 0.2 }}
-                        className="p-4 border-l-4 border-pink-200 bg-gray-50 rounded-lg"
+                        initial={{opacity: 0}}
+                        animate={{opacity: inView ? 1 : 0}}
+                        transition={{duration: 0.7, delay: idx * 0.2}}
+                        className="p-4 border-l-4 border-[var(--green)] bg-gray-50 rounded-lg"
                     >
                         <p className="font-medium">{item.name}</p>
                         <p className="text-sm">{item.description}</p>
