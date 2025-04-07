@@ -27,7 +27,7 @@ const Mastopathy = () => {
                 </p>
             </motion.div>
 
-            <div className="">
+            <div>
                 <motion.div
                     ref={ref2}
                     initial={{opacity: 0, x: -50}}
@@ -65,7 +65,7 @@ const Mastopathy = () => {
                         </p>
                         <div className="md:w-1/2 flex justify-center overflow-hidden relative h-fit">
                             <Parallax translateY={[-50, 50]}>
-                                <img src="/lycomat_3.png" alt="image"
+                                <img src="/PMS&mastopathy-bol-v-grudi.png" alt="Механизмы возникновения ПМС-мастопатии"
                                      className="max-w-full h-auto object-cover rounded-full"/>
                             </Parallax>
                         </div>

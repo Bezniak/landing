@@ -42,7 +42,7 @@ const UltrasoundDiagnostics = () => {
                     {/* Анимированное изображение */}
                     <motion.img
                         src="/page4.png"
-                        alt="background slide"
+                        alt="Помощь по ультразвуковым диагнозам молочной железы"
                         className="absolute inset-0 w-full h-full object-cover"
                         initial={{scale: 2}}
                         animate={{scale: [1, 1.05, 1]}}

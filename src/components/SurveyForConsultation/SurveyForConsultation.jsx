@@ -16,7 +16,7 @@ const SurveyForConsultation = () => {
                 {/* Анимированное изображение */}
                 <motion.img
                     src="/page5.png"
-                    alt="background slide"
+                    alt="консультация маммолога"
                     className="absolute inset-0 w-full h-full object-cover"
                     initial={{scale: 2}}
                     animate={{scale: [1, 1.05, 1]}}

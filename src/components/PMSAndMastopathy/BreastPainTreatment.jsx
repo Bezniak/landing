@@ -4,7 +4,7 @@ import {useInView} from 'react-intersection-observer';
 
 const data = [
     {
-        img: '/pills-hand.jpg',
+        img: '/PMS&mastopathy-izmeneniya-obraza-zhizni.png',
         title: 'Изменения образа жизни:',
         steps: [
             'Сократите потребление кофеина, алкоголя и соли.',
@@ -13,7 +13,7 @@ const data = [
         ],
     },
     {
-        img: '/pills-hand.jpg',
+        img: '/PMS&mastopathy-korrektsiya-pitaniya.png',
         title: 'Коррекция питания:',
         steps: [
             'Добавьте в рацион витамины (особенно витамин Е и витамин B6).',
@@ -22,7 +22,7 @@ const data = [
         ],
     },
     {
-        img: '/pills-hand.jpg',
+        img: '/PMS&mastopathy-lekarstvennaya-terapiya.png',
         title: 'Лекарственная терапия:',
         steps: [
             'Назначаются растительные препараты или БАДы (например, ЛикоМаст).',
@@ -37,7 +37,7 @@ const BreastPainTreatment = () => {
 
     return (
         <div className="container mx-auto my-10 md:my-20 p-4">
-            <h2 className="text-4xl mb-10 text-center">
+            <h2 className="text-3xl md:text-4xl mb-10 text-center">
                 Как лечить болезненность молочных желез перед месячными?
             </h2>
             <div>
@@ -50,7 +50,7 @@ const BreastPainTreatment = () => {
                 >
                     {data.map((item, index) => (
                         <div className="bg-white" key={index}>
-                            <img src={item.img} alt="img" className='w-full'/>
+                            <img src={item.img} alt={item.title} className='w-full'/>
                             <h5 className="my-3 text-2xl font-semibold tracking-tight text-gray-900 ">
                                 {item.title}
                             </h5>

@@ -17,18 +17,18 @@ const Layout = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Show the modal initially and every minute
-    useEffect(() => {
-        // Function to open modal
-        const openModal = () => {
-            setIsModalOpen(true);
-        };
-
-        // Set interval to show modal every 1 minute (60000 ms)
-        const intervalId = setInterval(openModal, 60000);
-
-        // Clear the interval when the component unmounts
-        return () => clearInterval(intervalId);
-    }, []);
+    // useEffect(() => {
+    //     // Function to open modal
+    //     const openModal = () => {
+    //         setIsModalOpen(true);
+    //     };
+    //
+    //     // Set interval to show modal every 1 minute (60000 ms)
+    //     const intervalId = setInterval(openModal, 60000);
+    //
+    //     // Clear the interval when the component unmounts
+    //     return () => clearInterval(intervalId);
+    // }, []);
 
     // Close modal handler
     const closeModal = () => {

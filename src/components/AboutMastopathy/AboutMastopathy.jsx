@@ -20,7 +20,7 @@ const faqData = [
 const InfoCard = ({imageSrc, text}) => (
     <div
         className="flex flex-col items-center bg-white border border-gray-200 rounded-lg w-full md:w-80 h-96">
-        <img className="object-cover w-full h-48 rounded-t-lg md:w-full md:h-48" src={imageSrc} alt="image"/>
+        <img className="object-cover w-full h-48 rounded-t-lg md:w-full md:h-48" src={imageSrc} alt={text}/>
         <div className="flex flex-col justify-center leading-normal h-full">
             <p className="tracking-tight text-center">{text}</p>
         </div>
@@ -41,7 +41,7 @@ const AboutMastopathy = () => {
                     className="relative overflow-hidden w-screen h-screen flex items-center justify-center bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700">
                     <motion.img
                         src="/page3.png"
-                        alt="background"
+                        alt="Мастопатия: симптомы, причины и лечение"
                         className="absolute inset-0 w-full h-full object-cover"
                         initial={{scale: 1.2}}
                         animate={{scale: 1.1}}
@@ -71,7 +71,7 @@ const AboutMastopathy = () => {
                         </div>
                         <div className="w-full md:w-1/2 flex justify-center overflow-hidden relative h-fit">
                             <Parallax translateY={[-50, 50]}>
-                                <img src="/lycomat_17.png" alt="image"
+                                <img src="/aboutMastopathy-chto-takoe-fibrozno-kistoznaya-mastopatiya.png" alt="Фиброзно-кистозная мастопатия"
                                      className="md:max-w-xl h-auto object-cover rounded-full"/>
                             </Parallax>
                         </div>
@@ -80,18 +80,18 @@ const AboutMastopathy = () => {
                     <h2 className="container p-5 mx-auto text-2xl mb-10 font-semibold text-gray-800">
                         Основные причины мастопатии у женщин
                     </h2>
-                    <div className="container mx-auto p-5 flex items-center justify-center gap-10 flex-wrap">
-                        <InfoCard imageSrc="/img_3.jpg" text="Гормональные изменения в организме"/>
-                        <InfoCard imageSrc="/img_3.jpg" text="Нарушение обмена веществ"/>
-                        <InfoCard imageSrc="/img_3.jpg" text="Генетическая предрасположенность"/>
-                        <InfoCard imageSrc="/img_3.jpg" text="Заболевания эндокринной системы"/>
+                    <div className="container mx-auto p-5 flex items-center justify-between gap-10 flex-wrap">
+                        <InfoCard imageSrc="/aboutMastopathy-osnovnye-prichiny-mastopatii-u-zhenschin-1.png" text="Гормональные изменения в организме"/>
+                        <InfoCard imageSrc="/aboutMastopathy-osnovnye-prichiny-mastopatii-u-zhenschin-2.png" text="Нарушение обмена веществ"/>
+                        <InfoCard imageSrc="/aboutMastopathy-osnovnye-prichiny-mastopatii-u-zhenschin-3.png" text="Генетическая предрасположенность"/>
+                        <InfoCard imageSrc="/aboutMastopathy-osnovnye-prichiny-mastopatii-u-zhenschin-4.png" text="Заболевания эндокринной системы"/>
                     </div>
 
                     <section
                         className='container mx-auto p-5 md:p-0 py-10 md:py-20 flex flex-col md:flex-row justify-evenly items-center gap-10'>
                         <div className="w-full md:w-1/2 flex justify-center overflow-hidden relative h-fit">
                             <Parallax translateY={[-50, 50]}>
-                                <img src="/lycomat_17.png" alt="image"
+                                <img src="/aboutMastopathy-gormonalnye-izmeneniya-i-mastopatiya.png" alt="Гормональные изменения и мастопатия"
                                      className="md:max-w-xl h-auto object-cover rounded-full"/>
                             </Parallax>
                         </div>
@@ -110,11 +110,11 @@ const AboutMastopathy = () => {
                     <h2 className="container mx-auto text-2xl mb-10 p-5 font-semibold text-gray-800">
                         Симптомы мастопатии: на что обратить внимание
                     </h2>
-                    <div className="flex items-center justify-center gap-10 flex-wrap">
-                        <InfoCard imageSrc="/img_3.jpg" text="Боль в области молочных желез"/>
-                        <InfoCard imageSrc="/img_3.jpg" text="Неровности и уплотнения в груди"/>
-                        <InfoCard imageSrc="/img_3.jpg" text="Выделения из сосков"/>
-                        <InfoCard imageSrc="/img_3.jpg" text="Изменения формы и размера молочной железы"/>
+                    <div className="container mx-auto p-5 flex items-center justify-between gap-10 flex-wrap">
+                        <InfoCard imageSrc="/aboutMastopathy-simptomy-mastopatii-na-chto-obratit-vnimanie-1.png" text="Боль в области молочных желез"/>
+                        <InfoCard imageSrc="/aboutMastopathy-simptomy-mastopatii-na-chto-obratit-vnimanie-2.png" text="Неровности и уплотнения в груди"/>
+                        <InfoCard imageSrc="/aboutMastopathy-simptomy-mastopatii-na-chto-obratit-vnimanie-3.png" text="Выделения из сосков"/>
+                        <InfoCard imageSrc="/aboutMastopathy-simptomy-mastopatii-na-chto-obratit-vnimanie-4.png" text="Изменения формы и размера молочной железы"/>
                     </div>
 
                     {/* Section: Diagnostics */}
@@ -161,10 +161,10 @@ const AboutMastopathy = () => {
                         animate={{opacity: 1}}
                         transition={{duration: 1.5}}
                     >
-                        <h2 className="text-2xl font-semibold text-white">
+                        <h2 className="text-2xl font-semibold text-center text-white">
                             Антиоксиданты при мастопатии: роль в профилактике
                         </h2>
-                        <p className="mt-4 text-white text-center">
+                        <p className="mt-4 !text-white text-center">
                             Антиоксиданты играют важную роль в профилактике и лечении мастопатии, так как они помогают
                             снизить воспаление и улучшить общее состояние организма. Включение антиоксидантных продуктов
                             в рацион может помочь предотвратить развитие заболевания.

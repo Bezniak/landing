@@ -39,7 +39,7 @@ const diagnosticMethods = [
 const DiagnosticMethods = () => {
     return (
         <div className="container mx-auto p-4 py-10 md:py-20">
-            <h2 className="text-4xl mb-10">
+            <h2 className="text-3xl md:text-4xl mb-10">
                 Методы диагностики заболеваний груди
             </h2>
             <div className="overflow-hidden">
@@ -64,7 +64,7 @@ const DiagnosticMethods = () => {
             <p className="mt-4 text-sm text-gray-500">
                 <span className='text-[var(--red)] font-semibold'>
                     Важно:
-                </span>
+                </span> &nbsp;
                 выбор метода диагностики остаётся за врачом, исходя из возраста пациентки, её индивидуальной истории и
                 предположительного диагноза.
             </p>

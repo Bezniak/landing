@@ -40,12 +40,7 @@ const TestForm = () => {
 
     return (
         <div>
-            {result ? (
-                <div
-                    className="p-6 h-96 text-center flex justify-center items-center mx-auto text-2xl font-semibold text-black">
-                    {result}
-                </div>
-            ) : (
+            <div>
                 <form onSubmit={handleSubmit(onSubmit)}
                       className="bg-white p-8 rounded-xl shadow-2xl w-full my-20 md:w-1/2 mx-auto space-y-8 border-t-4 border-[var(--green)]">
                     <h2 className="text-3xl font-extrabold text-center text-[var(--green)] mb-10">
@@ -57,12 +52,12 @@ const TestForm = () => {
                             <div className="space-y-3">
                                 {q.options.map((option) => (
                                     <label key={option}
-                                           className="flex items-center space-x-3 text-gray-600 text-lg cursor-pointer hover:text-pink-400 transition duration-300">
+                                           className="flex items-center space-x-3 text-gray-600 text-lg cursor-pointer transition duration-300">
                                         <input
                                             type="radio"
                                             value={option}
                                             {...register(`question${index + 1}`, {required: "Обязательное поле"})}
-                                            className="h-5 w-5 checked:bg-pink-600"
+                                            className="h-5 w-5"
                                         />
                                         <span>{option}</span>
                                     </label>
@@ -80,8 +75,11 @@ const TestForm = () => {
                         Узнать результат
                     </button>
                 </form>
-            )}
-
+                <div
+                    className="container p-5 text-center flex justify-center items-center mx-auto text-2xl font-semibold text-black">
+                    {result}
+                </div>
+            </div>
             {/* Показываем модальное окно через 4 секунды */}
             {isModalOpen && <ModalWindow closeModal={closeModal}/>}
         </div>

@@ -10,12 +10,12 @@ const FAQAccordion = ({faqItems}) => {
 
     return (
         <motion.section
-            className="py-20 h-fit p-6 bg-white rounded-lg shadow-md"
+            className="py-20 h-fit p-4 bg-white rounded-lg shadow-md"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 1.5}}
         >
-            <h2 className="text-4xl py-10 mt-10 text-center">
+            <h2 className="text-3xl md:text-4xl pb-10 mt-10 text-center">
                 Часто задаваемые вопросы о мастопатии
             </h2>
             <div className="mt-4 space-y-4 text-gray-700">

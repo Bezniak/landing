@@ -33,19 +33,19 @@ const steps = [
 const Steps = () => {
     return (
 
-        <div className="relative h-screen">
-            <Parallax className="absolute inset-0 z-0" translateY={[-10, 10]}>
-                <div className="bg-[url('/bg_medicine.jpg')] bg-cover bg-no-repeat h-full w-full"></div>
+        <div className="relative min-h-screen flex items-center justify-start p-4 overflow-hidden py-10">
+            <Parallax className="absolute inset-0 w-full h-full" translateY={[-10, 10]}>
+                <div className="bg-[url('/ultrasoundDiagnostics-chto-delat-posle-uzi.png')] bg-cover bg-no-repeat h-full w-full"></div>
             </Parallax>
             {/* Content block, above the background */}
             <div className="space-y-6 mt-10 relative z-10">
-                <h2 className="text-4xl mb-10 pt-10 text-center">
+                <h2 className="text-3xl md:text-4xl mb-10 text-center">
                     Что делать после УЗИ?
                 </h2>
                 {steps.map((step, index) => (
                     <div
                         key={index}
-                        className="container mx-auto flex items-center bg-transparent p-6 rounded-2xl"
+                        className="container mx-auto flex items-center bg-transparent rounded-2xl"
                     >
                         <div
                             className="flex items-center justify-center w-14 h-14 p-5 border border-gray-300 bg-[var(--green)] text-gray-900 font-bold text-2xl rounded-full">

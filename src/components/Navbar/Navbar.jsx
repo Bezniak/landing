@@ -73,7 +73,7 @@ const Navbar = () => {
                             </svg>
                         </button>
                         <NavLink to={ROUTES.HOME} className="flex flex-col items-center justify-center">
-                            <img src="/logo.svg" alt="logo company" className='size-16 md:size-32'/>
+                            <img src="/logo.svg" alt="ЛикоМаст" className='size-16 md:size-32'/>
                         </NavLink>
                     </div>
 

@@ -50,7 +50,7 @@ const ModalWindow = ({closeModal}) => {
                         </button>
                     </div>
 
-                    <img src="/lycomatFarmacy.png" alt="lycomat"/>
+                    <img src="/lycomatFarmacy.png" alt="ЛикоМаст"/>
 
                     {/* Кнопка "Купить" с обработчиком клика */}
                     <a

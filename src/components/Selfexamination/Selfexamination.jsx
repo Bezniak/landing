@@ -17,7 +17,7 @@ export const StepCard = ({Icon, title, steps}) => {
             transition={{duration: 1}}
             className="bg-white"
         >
-            <img src={Icon} alt="img" className='w-full'/>
+            <img src={Icon} alt={title} className='w-full'/>
             <h5 className="my-3 text-2xl font-semibold tracking-tight text-gray-900 ">
                 {title}
             </h5>
@@ -68,7 +68,7 @@ const Selfexamination = () => {
 
     return (
         <div className="container mx-auto py-10 p-4">
-            <h2 className="text-4xl mb-5 text-center">Самообследование молочных желез</h2>
+            <h2 className="text-3xl md:text-4xl mb-5 text-center">Самообследование молочных желез</h2>
             <p className="text-center mx-auto mb-10">
                 Регулярное самообследование – простая, но важная практика, позволяющая вовремя заметить возможные
                 изменения. Рекомендуется проводить его ежемесячно, примерно через 5–10 дней после начала менструации
@@ -80,9 +80,9 @@ const Selfexamination = () => {
                 ))}
             </div>
             <div
-                className='container mx-auto md:p-0 py-10 md:py-20 flex flex-col md:flex-row justify-evenly items-center gap-10'>
-                <div className='md:w-1/2 md:px-10'>
-                    <h2 className="text-4xl text-left">
+                className='container mx-auto md:p-0 py-10 md:py-20 flex flex-col md:flex-row justify-between items-center gap-10'>
+                <div className='md:w-1/2'>
+                    <h2 className="text-3xl md:text-4xl text-center md:text-left">
                         Когда нужно обращаться к маммологу или гинекологу
                     </h2>
                     <ul className='mt-10 text-justify md:text-left'>
@@ -104,15 +104,14 @@ const Selfexamination = () => {
                         </li>
                     </ul>
                     <p className='mt-10 !text-lg'>
-                        <span className='text-red-500 font-semibold'>Важно:</span> Самообследование не заменяет
-                        регулярные
-                        осмотры у специалиста и инструментальные методы диагностики, но может помочь вовремя заметить
-                        настораживающие симптомы.
+                        <span className='text-red-500 font-semibold'>Важно:</span> &nbsp;
+                        Самообследование не заменяет регулярные осмотры у специалиста и инструментальные методы
+                        диагностики, но может помочь вовремя заметить настораживающие симптомы.
                     </p>
                 </div>
                 <div className="w-full md:w-1/2 flex justify-center overflow-hidden relative h-fit">
                     <Parallax translateY={[-50, 50]}>
-                        <img src="/lycomat_17.png" alt="image"
+                        <img src="/info2.png" alt="Когда нужно обращаться к маммологу или гинекологу"
                              className="md:max-w-xl h-auto object-cover rounded-full"/>
                     </Parallax>
                 </div>

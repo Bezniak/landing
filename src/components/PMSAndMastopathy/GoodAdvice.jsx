@@ -4,21 +4,21 @@ import {motion} from "framer-motion";
 
 const data = [
     {
-        img: '/prevention_1.png',
+        img: '/PMS&mastopathy-poleznye-sovety-zhenschinam-pri-pms-mastopatii-1.png',
         desc: [
             "Носите удобный бюстгальтер без косточек, который хорошо поддерживает, но не сдавливает грудь.",
             "Делайте лёгкий массаж груди ежедневно в душе."
         ]
     },
     {
-        img: '/prevention_1.png',
+        img: '/PMS&mastopathy-poleznye-sovety-zhenschinam-pri-pms-mastopatii-2.png',
         desc: [
             "Используйте тёплые компрессы или мягкий гель с успокаивающим эффектом.",
             "Попробуйте пить травяные чаи на основе ромашки или мелиссы, чтобы снизить уровень стресса и напряжения."
         ]
     },
     {
-        img: '/prevention_1.png',
+        img: '/PMS&mastopathy-poleznye-sovety-zhenschinam-pri-pms-mastopatii-3.png',
         desc: [
             "Откажитесь от курения, так как оно может усиливать симптомы.",
             "Ведите дневник симптомов для точного отслеживания изменений и своевременного обращения к врачу."
@@ -28,8 +28,8 @@ const data = [
 
 const GoodAdvice = () => {
     return (
-        <div className='container mx-auto'>
-            <h2 className="container mx-auto p-4 text-4xl mb-10 text-center">
+        <div className='container mx-auto p-5'>
+            <h2 className="container mx-auto p-4 text-3xl md:text-4xl mb-10 text-center">
                 Полезные советы женщинам при ПМС-мастопатии
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

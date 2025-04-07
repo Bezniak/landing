@@ -5,7 +5,7 @@ const RiskFactors = () => {
     return (
         <div className="relative min-h-screen flex items-center justify-start p-4 overflow-hidden py-10">
             <Parallax speed={-20} className="absolute inset-0 w-full h-full">
-                <img src="/lycomat_30.png" alt="Background" className="w-full h-full object-cover"/>
+                <img src="/lycomat_30.png" alt="Факторы риска заболеваний молочных желез" className="w-full h-full object-cover"/>
             </Parallax>
             <div className="container mx-auto p-5 z-10 flex flex-col justify-start items-start">
                 <h2 className="text-2xl md:text-4xl mb-6 md:mb-10">
@@ -37,7 +37,8 @@ const RiskFactors = () => {
                     </li>
                 </ul>
                 <p className="mt-6 text-left text-base md:text-lg text-gray-500 font-normal">
-                    <strong className='text-[var(--green)] font-semibold'>Полезный факт:</strong> Длительное грудное
+                    <strong className='text-[var(--green)] font-semibold'>
+                        Полезный факт:</strong> &nbsp; Длительное грудное
                     вскармливание считается одним из факторов, снижающих вероятность развития некоторых заболеваний
                     молочных желез.
                 </p>

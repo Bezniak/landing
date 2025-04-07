@@ -10,7 +10,7 @@ const Advice = () => {
         <div className=" my-10 md:my-20">
             <div className="relative min-h-screen flex items-center justify-start p-4 overflow-hidden py-10">
                 <Parallax speed={-20} className="absolute inset-0 w-full h-full">
-                    <img src="/lycomat_30.png" alt="Background" className="w-full h-full object-cover"/>
+                    <img src="/lycomat_30.png" alt="ЛикоМаст" className="w-full h-full object-cover"/>
                 </Parallax>
                 <motion.div
                     ref={ref}
@@ -66,18 +66,20 @@ const Advice = () => {
                         >
                             <strong className='text-[var(--green)] font-semibold'>
                                 Полезный факт:
-                            </strong>
+                            </strong> &nbsp;
                             исследования показывают, что стресс значительно усиливает болезненность в груди, поэтому
                             регулярное снятие стресса (медитация, дыхательные практики) крайне важно.
                         </motion.li>
                     </ul>
                 </motion.div>
             </div>
-            <p className="bg-gradient-to-r py-20 flex justify-center items-center text-center from-red-900 to-red-700 text-white p-5 relative overflow-hidden">
-                ПМС-мастопатия не является опасным заболеванием, но значительно влияет на качество жизни. Поэтому
-                регулярное наблюдение и консультации специалистов помогут своевременно выявить любые отклонения и
-                подобрать оптимальный подход к лечению и профилактике.
-            </p>
+            <div className="bg-gradient-to-r py-20 flex justify-center items-center text-center from-red-900 to-red-700 text-white p-5 relative overflow-hidden">
+               <p className='container !text-white'>
+                   ПМС-мастопатия не является опасным заболеванием, но значительно влияет на качество жизни. Поэтому
+                   регулярное наблюдение и консультации специалистов помогут своевременно выявить любые отклонения и
+                   подобрать оптимальный подход к лечению и профилактике.
+               </p>
+            </div>
         </div>
     );
 };

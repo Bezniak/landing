@@ -24,21 +24,21 @@ const Structure = () => {
                 viewport={{once: false, amount: 0.2}}
             >
                 <ul>
-                    <motion.span className="font-semibold text-4xl" variants={textVariants}>
+                    <motion.span className="font-semibold text-3xl md:text-4xl" variants={textVariants}>
                         Строение и функции молочной железы
                     </motion.span>
-                    <motion.li className="flex gap-4 items-start my-5 text-xl !font-light text-gray-500"
+                    <motion.li className="flex gap-4 items-start my-5 text-xl"
                                variants={listItemVariants}>
                         <TiTickOutline className="size-8 fill-[var(--red)] flex-shrink-0"/>
                         Железистая ткань отвечает за производство грудного молока и состоит из долек (альвеол) и
                         протоков, по которым молоко транспортируется к соскам.
                     </motion.li>
-                    <motion.li className="flex gap-4 items-start my-5 text-xl !font-light text-gray-500"
+                    <motion.li className="flex gap-4 items-start my-5 text-xl"
                                variants={listItemVariants}>
                         <TiTickOutline className="size-8 fill-[var(--red)] flex-shrink-0"/>
                         Жировая ткань окружает железистую, придавая груди форму и объем.
                     </motion.li>
-                    <motion.li className="flex gap-4 items-start my-5 text-xl !font-light text-gray-500"
+                    <motion.li className="flex gap-4 items-start my-5 text-xl"
                                variants={listItemVariants}>
                         <TiTickOutline className="size-8 fill-[var(--red)] flex-shrink-0"/>
                         Соединительная ткань обеспечивает поддержку и структурную целостность железы.
@@ -58,7 +58,7 @@ const Structure = () => {
             {/* Ограничиваем блок и создаем плавный вертикальный параллакс */}
             <div className="md:w-1/2 flex justify-center overflow-hidden relative h-fit">
                 <Parallax translateY={[-50, 50]}>
-                    <img src="/lycomat_3.png" alt="image" className="max-w-full h-auto object-cover rounded-full"/>
+                    <img src="/info1.png" alt="Строение и функции молочной железы" className="max-w-full h-auto object-cover rounded-full"/>
                 </Parallax>
             </div>
         </div>

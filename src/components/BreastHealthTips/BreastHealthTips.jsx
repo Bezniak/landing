@@ -59,9 +59,9 @@ const tips = [
 
 export default function BreastHealthTips() {
     return (
-        <div className="container mx-auto p-8">
+        <div className="container mx-auto p-5">
             <motion.h2
-                className="text-4xl mb-10"
+                className="text-3xl md:text-4xl mb-10"
                 initial={{opacity: 0, y: -20}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 1}}
@@ -93,7 +93,7 @@ const InViewItem = ({index, tip}) => {
             }}
             transition={{duration: 0.4, delay: index * 0.1}}
         >
-            <div className="">
+            <div>
                 <img
                     src={tip.image}
                     alt={tip.title}

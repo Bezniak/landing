@@ -20,7 +20,7 @@ const PmsAndMastopathy = () => {
                     {/* Анимированное изображение */}
                     <motion.img
                         src="/page2.png"
-                        alt="background slide"
+                        alt="Болезненность в молочных железах как проявление предменструального мастопатического синдрома"
                         className="absolute inset-0 w-full h-full object-cover"
                         initial={{scale: 2}}
                         animate={{scale: [1, 1.05, 1]}}

@@ -13,7 +13,7 @@ export default function Conclusion() {
                 <div className='container md:px-10 mx-auto text-white text-center'>
                     {/* Заголовок с анимацией появления и подъема */}
                     <motion.h2
-                        className="text-4xl mb-10 leading-11"
+                        className="text-3xl md:text-4xl mb-10 leading-11"
                         initial={{opacity: 0, y: -60}}
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 1, ease: "easeOut"}}
@@ -23,7 +23,7 @@ export default function Conclusion() {
 
                     {/* Текст с анимациями */}
                     <motion.p
-                        className="mb-6 leading-relaxed"
+                        className="mb-6 leading-relaxed !text-white"
                         initial={{opacity: 0, x: -50}}
                         animate={{opacity: 1, x: 0}}
                         transition={{duration: 1.2, ease: "easeOut", delay: 0.5}}
@@ -33,7 +33,7 @@ export default function Conclusion() {
                         женского здоровья.
                     </motion.p>
                     <motion.p
-                        className="mb-6 leading-relaxed"
+                        className="mb-6 leading-relaxed !text-white"
                         initial={{opacity: 0, x: -50}}
                         animate={{opacity: 1, x: 0}}
                         transition={{duration: 1.2, ease: "easeOut", delay: 0.7}}

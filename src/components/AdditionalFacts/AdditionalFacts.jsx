@@ -24,7 +24,7 @@ export default function AdditionalFacts() {
     return (
         <div className="container mx-auto p-8 my-10">
             <motion.h2
-                className="text-4xl mb-10 text-center"
+                className="text-2xl md:text-4xl mb-10 text-center"
                 initial={{opacity: 0, y: -20}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 1}}
