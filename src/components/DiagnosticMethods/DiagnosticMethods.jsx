@@ -38,7 +38,7 @@ const diagnosticMethods = [
 
 const DiagnosticMethods = () => {
     return (
-        <div className="container mx-auto p-4 py-10 md:py-20">
+        <div className="container mx-auto py-10 md:py-20 p-5">
             <h2 className="text-3xl md:text-4xl mb-10">
                 Методы диагностики заболеваний груди
             </h2>

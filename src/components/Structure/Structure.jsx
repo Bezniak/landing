@@ -16,7 +16,7 @@ const listItemVariants = {
 const Structure = () => {
     return (
         <div
-            className="container mx-auto p-5 md:p-0 py-10 md:py-20 flex flex-col md:flex-row justify-between items-center gap-10">
+            className="container mx-auto p-5 py-10 md:py-20 flex flex-col md:flex-row justify-between items-center gap-10">
             <motion.div
                 className="md:w-1/2 md:px-10"
                 initial="hidden"

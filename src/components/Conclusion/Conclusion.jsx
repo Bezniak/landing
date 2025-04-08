@@ -10,7 +10,7 @@ export default function Conclusion() {
                 animate={{opacity: 1, scale: 1}}
                 transition={{duration: 1.5, delay: 0.3, ease: "easeOut"}}
             >
-                <div className='container md:px-10 mx-auto text-white text-center'>
+                <div className='container md:px-10 mx-auto text-white'>
                     {/* Заголовок с анимацией появления и подъема */}
                     <motion.h2
                         className="text-3xl md:text-4xl mb-10 leading-11"

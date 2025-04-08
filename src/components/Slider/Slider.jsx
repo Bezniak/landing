@@ -18,7 +18,7 @@ const Slider = () => {
 
             {/* Анимированный заголовок */}
             <motion.h1
-                className="relative leading-18 z-10 text-white text-3xl md:text-6xl text-center w-[75%] mx-auto"
+                className="relative z-10 text-white text-3xl md:text-6xl text-center w-[75%] mx-auto"
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{duration: 2}}

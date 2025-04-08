@@ -5,7 +5,7 @@ const Summary = () => {
         <div
             className="bg-gradient-to-r py-20 flex justify-center items-center from-red-900 to-red-700 text-black p-4 relative overflow-hidden">
             <div className="container mx-auto space-y-10">
-                <h2 className="text-3xl md:text-4xl mb-10 text-center text-white">
+                <h2 className="text-3xl md:text-4xl mb-10 text-white">
                     Подведём итоги
                 </h2>
                 <ul className="space-y-4 text-lg !text-white">

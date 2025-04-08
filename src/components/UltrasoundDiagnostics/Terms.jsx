@@ -60,7 +60,7 @@ const terms = [
 const Terms = () => {
     return (
         <div className="container mx-auto p-6">
-            <h2 className="text-4xl mb-10 text-center">Общие термины в УЗИ молочной железы</h2>
+            <h2 className="text-4xl mb-10">Общие термины в УЗИ молочной железы</h2>
             {terms.map((section, index) => (
                 <Section key={index} section={section}/>
             ))}

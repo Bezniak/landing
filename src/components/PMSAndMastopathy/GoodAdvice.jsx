@@ -29,7 +29,7 @@ const data = [
 const GoodAdvice = () => {
     return (
         <div className='container mx-auto p-5'>
-            <h2 className="container mx-auto p-4 text-3xl md:text-4xl mb-10 text-center">
+            <h2 className="container mx-auto text-3xl md:text-4xl mb-10">
                 Полезные советы женщинам при ПМС-мастопатии
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

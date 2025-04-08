@@ -73,8 +73,8 @@ const Advice = () => {
                     </ul>
                 </motion.div>
             </div>
-            <div className="bg-gradient-to-r py-20 flex justify-center items-center text-center from-red-900 to-red-700 text-white p-5 relative overflow-hidden">
-               <p className='container !text-white'>
+            <div className="bg-gradient-to-r py-20 from-red-900 to-red-700 text-white p-5 relative overflow-hidden">
+               <p className='container mx-auto p-5 !text-white'>
                    ПМС-мастопатия не является опасным заболеванием, но значительно влияет на качество жизни. Поэтому
                    регулярное наблюдение и консультации специалистов помогут своевременно выявить любые отклонения и
                    подобрать оптимальный подход к лечению и профилактике.

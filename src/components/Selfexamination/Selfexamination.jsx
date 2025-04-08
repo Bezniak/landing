@@ -67,9 +67,9 @@ const Selfexamination = () => {
     ];
 
     return (
-        <div className="container mx-auto py-10 p-4">
-            <h2 className="text-3xl md:text-4xl mb-5 text-center">Самообследование молочных желез</h2>
-            <p className="text-center mx-auto mb-10">
+        <div className="container mx-auto py-10 p-5">
+            <h2 className="text-3xl md:text-4xl mb-5">Самообследование молочных желез</h2>
+            <p className="mb-10">
                 Регулярное самообследование – простая, но важная практика, позволяющая вовремя заметить возможные
                 изменения. Рекомендуется проводить его ежемесячно, примерно через 5–10 дней после начала менструации
                 (когда гормональный фон наиболее стабилен и грудь менее отёчная).
@@ -80,9 +80,9 @@ const Selfexamination = () => {
                 ))}
             </div>
             <div
-                className='container mx-auto md:p-0 py-10 md:py-20 flex flex-col md:flex-row justify-between items-center gap-10'>
+                className='py-10 md:py-20 flex flex-col md:flex-row justify-between items-center gap-10'>
                 <div className='md:w-1/2'>
-                    <h2 className="text-3xl md:text-4xl text-center md:text-left">
+                    <h2 className="text-2xl md:text-4xl md:text-left">
                         Когда нужно обращаться к маммологу или гинекологу
                     </h2>
                     <ul className='mt-10 text-justify md:text-left'>

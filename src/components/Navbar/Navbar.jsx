@@ -56,7 +56,10 @@ const Navbar = () => {
             <nav
                 className="absolute z-50 bg-transparent top-0 left-1/2 transform -translate-x-1/2 border-gray-200 w-full">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <div className='flex gap-6'>
+                    <div className='flex gap-6 items-center !justify-between w-full md:w-fit'>
+                        <NavLink to={ROUTES.HOME} className="flex flex-col items-center justify-center">
+                            <img src="/logo.svg" alt="ЛикоМаст" className='size-18 md:size-32'/>
+                        </NavLink>
                         <button
                             data-collapse-toggle="navbar-dropdown"
                             type="button"
@@ -68,19 +71,16 @@ const Navbar = () => {
                             <span className="sr-only">Open main menu</span>
                             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                  viewBox="0 0 17 14">
-                                <path stroke="gray" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                <path stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                       d="M1 1h15M1 7h15M1 13h15"/>
                             </svg>
                         </button>
-                        <NavLink to={ROUTES.HOME} className="flex flex-col items-center justify-center">
-                            <img src="/logo.svg" alt="ЛикоМаст" className='size-16 md:size-32'/>
-                        </NavLink>
                     </div>
 
                     <div
                         className={`$ ${isMobileMenuOpen ? 'block' : 'hidden'} w-full py-5  md:block md:w-auto md:bg-transparent bg-white`}
                         id="mobile-dropdown">
-                        <ul className="flex flex-col font-medium p-4 md:p-0 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                        <ul className="flex flex-col font-medium p-4 md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                             <li>
                                 <NavLink
                                     to={ROUTES.BREAST_HEALTH}

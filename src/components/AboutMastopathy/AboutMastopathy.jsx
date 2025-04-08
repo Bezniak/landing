@@ -156,19 +156,21 @@ const AboutMastopathy = () => {
 
                     {/* Section: Antioxidants in Prevention */}
                     <motion.section
-                        className="bg-gradient-to-r py-20 flex flex-col justify-center items-center from-red-900 to-red-700  p-4 relative overflow-hidden"
+                        className="bg-gradient-to-r py-20 flex flex-col justify-center items-center from-red-900 to-red-700  p-5 relative overflow-hidden"
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
                         transition={{duration: 1.5}}
                     >
-                        <h2 className="text-2xl font-semibold text-center text-white">
-                            Антиоксиданты при мастопатии: роль в профилактике
-                        </h2>
-                        <p className="mt-4 !text-white text-center">
-                            Антиоксиданты играют важную роль в профилактике и лечении мастопатии, так как они помогают
-                            снизить воспаление и улучшить общее состояние организма. Включение антиоксидантных продуктов
-                            в рацион может помочь предотвратить развитие заболевания.
-                        </p>
+                        <div className='container mx-auto'>
+                            <h2 className="text-2xl font-semibold text-white">
+                                Антиоксиданты при мастопатии: роль в профилактике
+                            </h2>
+                            <p className="mt-4 !text-white">
+                                Антиоксиданты играют важную роль в профилактике и лечении мастопатии, так как они помогают
+                                снизить воспаление и улучшить общее состояние организма. Включение антиоксидантных продуктов
+                                в рацион может помочь предотвратить развитие заболевания.
+                            </p>
+                        </div>
                     </motion.section>
                 </div>
             </div>

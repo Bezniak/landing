@@ -29,7 +29,7 @@ const PmsMastopathyDiagnosis = () => {
 
     return (
         <div className="container mx-auto my-20 p-4">
-            <h2 className="text-3xl md:text-4xl mb-10 text-center">
+            <h2 className="text-3xl md:text-4xl mb-10">
                 Как выявить предменструальную мастопатию?
             </h2>
             <motion.div

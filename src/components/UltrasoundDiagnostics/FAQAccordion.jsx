@@ -10,12 +10,12 @@ const FAQAccordion = ({faqItems}) => {
 
     return (
         <motion.section
-            className="py-20 h-fit p-4 bg-white rounded-lg shadow-md"
+            className="py-20 container mx-auto h-fit p-5"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 1.5}}
         >
-            <h2 className="text-3xl md:text-4xl pb-10 mt-10 text-center">
+            <h2 className="text-3xl md:text-4xl pb-10 mt-10">
                 Часто задаваемые вопросы о мастопатии
             </h2>
             <div className="mt-4 space-y-4 text-gray-700">
@@ -24,7 +24,7 @@ const FAQAccordion = ({faqItems}) => {
                         <h2 id={`accordion-open-heading-${index + 1}`}>
                             <button
                                 type="button"
-                                className="w-full flex justify-between items-center rounded-lg text-left p-4 font-medium text-white bg-linear-to-r/hsl from-green-600 to-green-500 hover:bg-pink-200 focus:outline-none transition cursor-pointer"
+                                className="w-full flex justify-between items-start rounded-lg text-left p-4 font-medium text-white bg-linear-to-r/hsl from-green-600 to-green-500 focus:outline-none transition cursor-pointer"
                                 onClick={() => toggleAccordion(index)}
                                 aria-expanded={openIndex === index}
                                 aria-controls={`accordion-open-body-${index + 1}`}

@@ -3,11 +3,11 @@ import {Parallax} from 'react-scroll-parallax';
 
 const RiskFactors = () => {
     return (
-        <div className="relative min-h-screen flex items-center justify-start p-4 overflow-hidden py-10">
+        <div className="relative min-h-screen flex items-center justify-start p-5 overflow-hidden py-10">
             <Parallax speed={-20} className="absolute inset-0 w-full h-full">
                 <img src="/lycomat_30.png" alt="Факторы риска заболеваний молочных желез" className="w-full h-full object-cover"/>
             </Parallax>
-            <div className="container mx-auto p-5 z-10 flex flex-col justify-start items-start">
+            <div className="container mx-auto z-10 flex flex-col justify-start items-start">
                 <h2 className="text-2xl md:text-4xl mb-6 md:mb-10">
                     Факторы риска заболеваний молочных желез
                 </h2>

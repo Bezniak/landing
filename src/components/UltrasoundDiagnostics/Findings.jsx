@@ -79,14 +79,14 @@ const findings = [
 const Findings = () => {
     return (
         <div className="container mx-auto p-5 py-20">
-            <h2 className="text-3xl md:text-4xl pb-20 pt-10 text-center">
+            <h2 className="text-3xl md:text-4xl pb-20 pt-10">
                 Распространённые ультразвуковые находки и диагнозы
             </h2>
-            <div className='flex flex-wrap justify-evenly items-stretch gap-10'>
+            <div className='flex flex-wrap justify-between items-stretch gap-10'>
                 {findings.map((finding, index) => (
                     <motion.div
                         key={index}
-                        className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl h-auto"
+                        className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-2xl h-auto"
                         initial={{opacity: 0, scale: 0.8}}
                         whileInView={{opacity: 1, scale: 1}}
                         transition={{duration: 0.5, delay: index * 0.2}}

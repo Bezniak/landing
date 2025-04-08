@@ -38,8 +38,8 @@ const Steps = () => {
                 <div className="bg-[url('/ultrasoundDiagnostics-chto-delat-posle-uzi.png')] bg-cover bg-no-repeat h-full w-full"></div>
             </Parallax>
             {/* Content block, above the background */}
-            <div className="space-y-6 mt-10 relative z-10">
-                <h2 className="text-3xl md:text-4xl mb-10 text-center">
+            <div className="container mx-auto space-y-6 mt-10 relative z-10">
+                <h2 className="text-3xl md:text-4xl mb-10">
                     Что делать после УЗИ?
                 </h2>
                 {steps.map((step, index) => (

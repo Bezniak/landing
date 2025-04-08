@@ -37,7 +37,7 @@ const BreastPainTreatment = () => {
 
     return (
         <div className="container mx-auto my-10 md:my-20 p-4">
-            <h2 className="text-3xl md:text-4xl mb-10 text-center">
+            <h2 className="text-3xl md:text-4xl mb-10">
                 Как лечить болезненность молочных желез перед месячными?
             </h2>
             <div>
