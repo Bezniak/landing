@@ -36,5 +36,20 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
+  },
+  "author": {
+    "name": "Ivan Bezniak",
+    "email": "ivan.bezniak@gmail.com",
+    "phone": "+375295210417",
+    "telegram": "@ivan_bezniak",
+    "url": "https://www.linkedin.com/in/ivan-bezniak-2634a11a0/"
+  },
+  "license": "UNLICENSED",
+  "copyright": "© 2025 Ivan Bezniak. All rights reserved.",
+  "legal": {
+    "ownership": "All exclusive rights to the source code and graphic elements belong to the Developer (Ivan Bezniak).",
+    "usage": "A non-exclusive right to use the website is granted to the Client only after full payment and does not include rights to modification, resale, or transfer to third parties without written consent.",
+    "reuse": "The Developer may reuse non-unique parts of the project in future works.",
+    "warranty": "The Developer provides a 30-day warranty for fixing bugs found after delivery, excluding errors caused by third-party interference or improper usage."
   }
 }
