@@ -1,5 +1,5 @@
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
-import {ROUTES} from "./config/routes.js";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { ROUTES } from "./config/routes.js";
 import NotFound from "./components/NotFound/NotFound.jsx";
 import Home from "./pages/Home.jsx";
 import Footer from "./components/Footer/Footer.jsx";
@@ -8,102 +8,93 @@ import PMSAndMastopathy from "./components/PMSAndMastopathy/PMSAndMastopathy.jsx
 import AboutMastopathy from "./components/AboutMastopathy/AboutMastopathy.jsx";
 import UltrasoundDiagnostics from "./components/UltrasoundDiagnostics/UltrasoundDiagnostics.jsx";
 import SurveyForConsultation from "./components/SurveyForConsultation/SurveyForConsultation.jsx";
-import {useEffect, useState} from "react";
+import { useState } from "react";
 import ModalWindow from "./components/ModalWindow/ModalWindow.jsx";
-import {FaPlusCircle} from "react-icons/fa";
-
+import { FaShoppingCart } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Layout = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Show the modal initially and every minute
-    // useEffect(() => {
-    //     // Function to open modal
-    //     const openModal = () => {
-    //         setIsModalOpen(true);
-    //     };
-    //
-    //     // Set interval to show modal every 1 minute (60000 ms)
-    //     const intervalId = setInterval(openModal, 60000);
-    //
-    //     // Clear the interval when the component unmounts
-    //     return () => clearInterval(intervalId);
-    // }, []);
-
-    // Close modal handler
     const closeModal = () => {
         setIsModalOpen(false);
     };
 
-    // Open modal when button is clicked
     const openModalHandler = () => {
         setIsModalOpen(true);
     };
 
     return (
         <div className="d-flex flex-column min-vh-100">
-            <Navbar/>
-            {/* Modal that shows immediately after the app loads */}
-            {isModalOpen && <ModalWindow closeModal={closeModal}/>}
+            <Navbar />
+            {isModalOpen && <ModalWindow closeModal={closeModal} />}
             <div className="flex-grow-1">
-                <Outlet/>
+                <Outlet />
             </div>
-            <Footer/>
+            <Footer />
 
-            {/* Floating Action Button */}
-            <button
+            {/* Floating Action Button with larger permanent shadow animation */}
+            <motion.button
                 onClick={openModalHandler}
-                className="fixed bottom-10 right-10 bg-white text-red-500 p-4 rounded-full shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-300 hover:bg-red-500 hover:text-white"
+                initial={{ boxShadow: "0 0 15px rgba(255, 0, 0, 0.4)" }}
+                animate={{
+                    boxShadow: [
+                        "0 0 15px rgba(255, 0, 0, 0.4)",
+                        "0 0 35px rgba(255, 0, 0, 0.8)",
+                        "0 0 15px rgba(255, 0, 0, 0.4)"
+                    ]
+                }}
+                transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+                className="fixed bottom-10 right-10 z-50 cursor-pointer bg-white text-red-500 p-4 rounded-full
+                focus:outline-none focus:ring-2 hover:bg-red-500 hover:text-white"
                 title="Show Pharmacies"
             >
-                <FaPlusCircle size={32} className="transition"/>
-            </button>
-
+                <FaShoppingCart size={28} />
+            </motion.button>
         </div>
     );
 };
-
 
 const App = () => {
     const router = createBrowserRouter([
         {
             path: ROUTES.HOME,
-            element: <Layout/>,
-            errorElement: <NotFound/>,
+            element: <Layout />,
+            errorElement: <NotFound />,
             children: [
                 {
                     path: ROUTES.HOME,
-                    element: <Home/>
+                    element: <Home />
                 },
                 {
                     path: ROUTES.NOT_FOUND,
-                    element: <NotFound/>
+                    element: <NotFound />
                 },
                 {
                     path: ROUTES.PMS_MASTOPATHY,
-                    element: <PMSAndMastopathy/>
+                    element: <PMSAndMastopathy />
                 },
                 {
                     path: ROUTES.ABOUT_MASTOPATHY,
-                    element: <AboutMastopathy/>
+                    element: <AboutMastopathy />
                 },
                 {
                     path: ROUTES.ULTRASOUND_DIAGNOSTICS,
-                    element: <UltrasoundDiagnostics/>
+                    element: <UltrasoundDiagnostics />
                 },
                 {
                     path: ROUTES.SURVEY_FOR_CONSULTATION,
-                    element: <SurveyForConsultation/>
-                },
+                    element: <SurveyForConsultation />
+                }
             ]
-        },
+        }
     ]);
 
-    return (
-        <div>
-            <RouterProvider router={router}/>
-        </div>
-    );
+    return <RouterProvider router={router} />;
 };
 
 export default App;

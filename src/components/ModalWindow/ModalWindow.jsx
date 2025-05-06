@@ -54,7 +54,7 @@ const ModalWindow = ({closeModal}) => {
 
                     {/* Кнопка "Купить" с обработчиком клика */}
                     <a
-                        href="https://tabletka.by/result/?ls=104159"
+                        href="https://apteka.by/goods/likomast-kapsuly-458-mg-30-sht-oxford-5bcf8dd0"
                         target="_blank"
                         className="text-white tracking-widest mb-5 uppercase mx-auto w-fit !font-medium block bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 transition cursor-pointer focus:ring-4 focus:outline-none rounded-lg text-sm px-12 py-3 text-center"
 

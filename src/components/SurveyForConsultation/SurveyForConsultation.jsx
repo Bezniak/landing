@@ -25,7 +25,7 @@ const SurveyForConsultation = () => {
 
                 {/* Анимированный заголовок */}
                 <motion.h1
-                    className="relative leading-18 z-10 text-white text-3xl md:text-5xl text-center w-[90%] mx-auto"
+                    className="relative z-10 text-white text-3xl md:text-5xl text-center w-[90%] mx-auto"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 2}}

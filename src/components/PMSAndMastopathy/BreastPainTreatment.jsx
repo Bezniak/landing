@@ -11,6 +11,7 @@ const data = [
             'Увеличьте физическую активность (йога, пешие прогулки).',
             ' Обеспечьте достаточный сон и отдых.'
         ],
+        isButton: false,
     },
     {
         img: '/PMS&mastopathy-korrektsiya-pitaniya.png',
@@ -20,6 +21,7 @@ const data = [
             'Снизьте потребление сахара, жирной и жареной пищи.',
             'Употребляйте больше фруктов, овощей и клетчатки.'
         ],
+        isButton: false,
     },
     {
         img: '/PMS&mastopathy-lekarstvennaya-terapiya.png',
@@ -28,6 +30,7 @@ const data = [
             'Назначаются растительные препараты или БАДы (например, ЛикоМаст).',
             'В некоторых случаях врач назначает гормональные препараты (гестагены) для стабилизации гормонального фона.',
         ],
+        isButton: true,
     },
 ]
 
@@ -50,7 +53,16 @@ const BreastPainTreatment = () => {
                 >
                     {data.map((item, index) => (
                         <div className="bg-white" key={index}>
-                            <img src={item.img} alt={item.title} className='w-full'/>
+                            {
+                                item.isButton ? (
+                                        <a href="https://apteka.by/goods/likomast-kapsuly-458-mg-30-sht-oxford-5bcf8dd0"
+                                           target="_blank"
+                                        >
+                                            <img src={item.img} alt={item.title} className='w-full'/>
+                                        </a>
+                                    )
+                                    : <img src={item.img} alt={item.title} className='w-full'/>
+                            }
                             <h5 className="my-3 text-2xl font-semibold tracking-tight text-gray-900 ">
                                 {item.title}
                             </h5>
